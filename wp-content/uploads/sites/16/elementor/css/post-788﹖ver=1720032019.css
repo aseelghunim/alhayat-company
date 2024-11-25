@@ -49,7 +49,7 @@
 }
 
 .elementor-788 .elementor-element.elementor-element-16f12ef {
-	text-align: center;
+	text-align: right;
 }
 
 .elementor-788 .elementor-element.elementor-element-16f12ef .elementor-heading-title {
@@ -58,15 +58,17 @@
 
 .elementor-788 .elementor-element.elementor-element-215f9ca {
 	width: var(--container-widget-width, 70%);
-	max-width: 70%;
+	max-width: 50%!important;
 	--container-widget-width: 70%;
 	--container-widget-flex-grow: 0;
-	text-align: center;
+	text-align: start;
 	color: #FFFFFF;
+	line-height: 1.8;
+	font-size: 16px!important;
 }
 
 .elementor-788 .elementor-element.elementor-element-215f9ca.elementor-element {
-	--align-self: center;
+	--align-self: start;
 }
 
 .elementor-788 .elementor-element.elementor-element-18421c5 {
@@ -77,7 +79,7 @@
 	--container-widget-flex-grow: 1;
 	--container-widget-align-self: stretch;
 	--flex-wrap-mobile: wrap;
-	--justify-content: center;
+	--justify-content: start;
 	--align-items: center;
 	--background-transition: 0.3s;
 }

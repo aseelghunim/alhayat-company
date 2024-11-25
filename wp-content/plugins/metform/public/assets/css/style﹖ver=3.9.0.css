@@ -407,13 +407,13 @@ body.theme-twentytwentyone .mf-input-switch .mf-input-control:checked~.mf-input-
 }
 
 .mf-input-wrapper .mf-input {
-    width: 100%;
+    /* width: 100%; */
     max-width: 100%;
     padding: 12px;
     height: auto;
     border-width: 1px;
     border-style: solid;
-    border-color: white!important;
+    border-color: #333!important;
     border-radius: 2px;
     background: 0 0;
     background-color: #fafafa;
@@ -430,7 +430,11 @@ body.theme-twentytwentyone .mf-input-switch .mf-input-control:checked~.mf-input-
 
 .mf-form-wrapper .metform-form-content .metform-form-main-wrapper .mf-input-wrapper .mf-input {
     font-size: 16px;
-    -webkit-appearance: none
+    -webkit-appearance: none;
+   
+}
+.footer .mf-form-wrapper .metform-form-content .metform-form-main-wrapper .mf-input-wrapper .mf-input {
+    border-color:white!important ;
 }
 
 .mf-input-wrapper .mf-input:focus,
@@ -444,43 +448,45 @@ body.theme-twentytwentyone .mf-input-switch .mf-input-control:checked~.mf-input-
 }
 
 .mf-input-wrapper .mf-input:-ms-input-placeholder {
-    color: white!important;
+    color: #333!important;
     font-weight: 400;
     font-size: 14px
 }
 
 .mf-input-wrapper .mf-input::-webkit-input-placeholder {
-    color: white!important;
+    color: #333!important;
     font-weight: 400;
     font-size: 14px
 }
 
 .mf-input-wrapper .mf-input::-moz-placeholder {
-    color: white!important;
+    color: #333!important;
     font-weight: 400;
     font-size: 14px
 }
 
 .mf-input-wrapper .mf-input::-ms-input-placeholder {
-    color: white!important;
+    color: #333!important;
     font-weight: 400;
     font-size: 14px
 }
 
 .mf-input-wrapper .mf-input::placeholder {
-    color: white!important;
+    color: #333!important;
     font-weight: 400;
     font-size: 14px
 }
-
-.mf-input-wrapper .mf-input::-webkit-input-placeholder {
+.footer .mf-input-wrapper .mf-input::placeholder {
     color: white!important;
+}
+.mf-input-wrapper .mf-input::-webkit-input-placeholder {
+    color: #333!important;
     font-weight: 400;
     font-size: 14px
 }
 
 .mf-input-wrapper .mf-input:-moz-placeholder {
-    color: white!important;
+    color: #333!important;
     font-weight: 400;
     font-size: 14px
 }

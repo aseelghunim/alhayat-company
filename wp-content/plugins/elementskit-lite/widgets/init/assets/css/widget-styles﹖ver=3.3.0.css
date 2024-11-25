@@ -2605,7 +2605,7 @@ div.twentytwenty-handle {
 .elementskit-navbar-nav-default .elementskit-navbar-nav.elementskit-menu-po-center {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: flex-end
+    justify-content: center;
 }
 
 .elementskit-navbar-nav-default .elementskit-navbar-nav.elementskit-menu-po-right {

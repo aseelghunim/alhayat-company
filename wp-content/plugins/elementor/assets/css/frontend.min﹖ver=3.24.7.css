@@ -17,8 +17,10 @@ body{
 }
 .navbar li a{
     color: #333!important;
-    font-size: 15px!important;
+    font-size: 16px!important;
     font-weight: 600!important;
+    padding-left: 20px!important;
+    padding-right: 20px!important;
 }
 .logo{
     display: flex;
@@ -29,14 +31,22 @@ body{
 .logo p{
     margin-bottom: 0;
     color: #333;
-    font-size: 15px!important;
+    font-size: 16px!important;
     font-weight: 600!important;
 }
-
+#menu-item-412:last-child a{
+    font-weight: 600;
+    color: #333!important;
+    transition: 0.3s all;
+}
+#menu-item-412:last-child a:hover{
+   
+    color: #2E7D32!important;
+}
 .header-btn{
-    background-color: #1E88E5!important;
+    background-color: transparent!important;
     color: white!important;
-    border-color: #1E88E5!important;
+    border-color: #fff!important;
 
 }
 .solutions h3{
@@ -61,9 +71,21 @@ body{
     text-align: right!important;
 }
 
-
+.blogs{
+    display: none!important;
+}
 .blogs .post-meta-list{
     display: flex;
+}
+.nav-tabs{
+    border-bottom: none!important;
+}
+ .elementor-695 .elementor-element.elementor-element-e7b588b{
+    height: 600px!important;
+    overflow: hidden;
+}
+.elementor-695 .elementor-element.elementor-element-e7b588b img{
+    height: 100%;
 }
 .blogs .meta-date{
 display: flex!important;
@@ -92,7 +114,14 @@ column-gap: 4px;
     display: none!important;
 }
 .partners{
-    padding-top: 80px;
+    padding-top: 80px!important;
+    background-color: white!important;
+}
+.partners .elementor-element.elementor-element-94c8c3c:not(.elementor-motion-effects-element-type-background){
+    background-color: #1e88e5!important;
+}
+.services {
+    z-index: 999;
 }
 .footer{
     background-color: #2E7D32;

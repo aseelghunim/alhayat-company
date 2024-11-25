@@ -14,6 +14,9 @@
 		/*! This file is auto-generated */
 		!function (i, n) { var o, s, e; function c(e) { try { var t = { supportTests: e, timestamp: (new Date).valueOf() }; sessionStorage.setItem(o, JSON.stringify(t)) } catch (e) { } } function p(e, t, n) { e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0); var t = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data), r = (e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(n, 0, 0), new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data)); return t.every(function (e, t) { return e === r[t] }) } function u(e, t, n) { switch (t) { case "flag": return n(e, "\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f", "\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f") ? !1 : !n(e, "\ud83c\uddfa\ud83c\uddf3", "\ud83c\uddfa\u200b\ud83c\uddf3") && !n(e, "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f", "\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f"); case "emoji": return !n(e, "\ud83d\udc26\u200d\u2b1b", "\ud83d\udc26\u200b\u2b1b") }return !1 } function f(e, t, n) { var r = "undefined" != typeof WorkerGlobalScope && self instanceof WorkerGlobalScope ? new OffscreenCanvas(300, 150) : i.createElement("canvas"), a = r.getContext("2d", { willReadFrequently: !0 }), o = (a.textBaseline = "top", a.font = "600 32px Arial", {}); return e.forEach(function (e) { o[e] = t(a, e, n) }), o } function t(e) { var t = i.createElement("script"); t.src = e, t.defer = !0, i.head.appendChild(t) } "undefined" != typeof Promise && (o = "wpEmojiSettingsSupports", s = ["flag", "emoji"], n.supports = { everything: !0, everythingExceptFlag: !0 }, e = new Promise(function (e) { i.addEventListener("DOMContentLoaded", e, { once: !0 }) }), new Promise(function (t) { var n = function () { try { var e = JSON.parse(sessionStorage.getItem(o)); if ("object" == typeof e && "number" == typeof e.timestamp && (new Date).valueOf() < e.timestamp + 604800 && "object" == typeof e.supportTests) return e.supportTests } catch (e) { } return null }(); if (!n) { if ("undefined" != typeof Worker && "undefined" != typeof OffscreenCanvas && "undefined" != typeof URL && URL.createObjectURL && "undefined" != typeof Blob) try { var e = "postMessage(" + f.toString() + "(" + [JSON.stringify(s), u.toString(), p.toString()].join(",") + "));", r = new Blob([e], { type: "text/javascript" }), a = new Worker(URL.createObjectURL(r), { name: "wpTestEmojiSupports" }); return void (a.onmessage = function (e) { c(n = e.data), a.terminate(), t(n) }) } catch (e) { } c(n = f(s, u, p)) } t(n) }).then(function (e) { for (var t in e) n.supports[t] = e[t], n.supports.everything = n.supports.everything && n.supports[t], "flag" !== t && (n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && n.supports[t]); n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && !n.supports.flag, n.DOMReady = !1, n.readyCallback = function () { n.DOMReady = !0 } }).then(function () { return e }).then(function () { var e; n.supports.everything || (n.readyCallback(), (e = n.source || {}).concatemoji ? t(e.concatemoji) : e.wpemoji && e.twemoji && (t(e.twemoji), t(e.wpemoji))) })) }((window, document), window._wpemojiSettings);
 	</script>
+	<link rel='stylesheet' id='elementor-post-695-css'
+		href='../../wp-content/uploads/sites/16/elementor/css/post-695%EF%B9%96ver=1720032385.css' media='all' />
+
 	<link rel='stylesheet' id='elementor-frontend-css'
 		href='wp-content/plugins/elementor/assets/css/frontend.min%EF%B9%96ver=3.24.7.css' media='all' />
 	<link rel='stylesheet' id='elementor-post-394-css'
@@ -378,6 +381,33 @@
 			font-size: 1.5em;
 			line-height: 1.6;
 		}
+
+		.top-bar {
+			background-color: #f1f1f1;
+			padding: 10px 4.5% 10px 3.5%;
+			/* display: flex; */
+			/* justify-content: space-between; */
+			/* align-items: center; */
+		}
+
+		.top-bar .phone a {
+			font-size: 16px;
+			color: #333;
+			transition: 0.3s all;
+		}
+
+		.top-bar .social-icons a {
+			margin: 0 8px 0 0;
+			color: #333;
+			text-decoration: none;
+			font-size: 16px;
+			transition: 0.3s all;
+		}
+
+		.top-bar .phone a:hover,
+		.top-bar .social-icons a:hover {
+			color: #2E7D32;
+		}
 	</style>
 	<link rel='stylesheet' id='template-kit-export-css'
 		href='wp-content/plugins/template-kit-export/assets/public/template-kit-export-public%EF%B9%96ver=1.0.23.css'
@@ -457,11 +487,28 @@
 
 <body
 	class="home page-template page-template-elementor_header_footer page page-id-788 elementor-default elementor-template-full-width elementor-kit-3 elementor-page elementor-page-788">
+	<div class="top-bar">
+		<div class="e-con-inner d-flex justify-content-between align-items-center">
+			<div class="phone">
+				<a href="" class="text-decoration-none ms-3"><i class="fa fa-phone"></i> 0123456789</a>
+				<a href="" class="text-decoration-none"><i class="fa fa-envelope"></i> info@alhayat.ps</a>
+			</div>
+			<div class="social-icons">
+				<a href="https://www.facebook.com/yourpage" target="_blank"><i class="fab fa-facebook-f"></i></a>
+				<a href="https://www.instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
+				<a href="https://twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i></a>
+				<a href="https://www.youtube.com/channel/yourchannel" target="_blank"><i class="fab fa-youtube"></i></a>
+				<a href="https://www.tiktok.com/@yourprofile" target="_blank"><i class="fab fa-tiktok"></i></a>
+				<a href="https://www.linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+		</div>
+
+	</div>
 	<div class="ekit-template-content-markup ekit-template-content-header ekit-template-content-theme-support">
 		<div data-elementor-type="wp-post" data-elementor-id="394" class="elementor elementor-394">
 			<div class=" navbar elementor-element elementor-element-24d3436 e-flex e-con-boxed e-con e-parent"
 				data-id="24d3436" data-element_type="container">
-				<div class="e-con-inner ">
+				<div class="e-con-inner justify-content-between align-items-center">
 					<div class="elementor-element elementor-element-c5d0f3c e-con-full e-flex e-con e-child"
 						data-id="c5d0f3c" data-element_type="container">
 						<div class="elementor-element elementor-element-8186ab9 e-con-full e-flex e-con e-child"
@@ -496,11 +543,43 @@
 													class="menu-item menu-item-type-custom menu-item-object-custom menu-item-401 nav-item elementskit-mobile-builder-content"
 													data-vertical-menu=750px><a href="template-kit/home/index.html"
 														class="ekit-menu-nav-link">الرئيسية</a></li> -->
-
 												<li id="menu-item-402"
 													class="menu-item menu-item-type-custom menu-item-object-custom menu-item-402 nav-item elementskit-mobile-builder-content"
 													data-vertical-menu=750px><a href="template-kit/about-us/index.html"
-														class="ekit-menu-nav-link">عن شركة الحياة</a></li>
+														class="ekit-menu-nav-link">الرئيسية</a>
+												</li>
+												<!-- <li id="menu-item-402"
+													class="menu-item menu-item-type-custom menu-item-object-custom menu-item-402 nav-item elementskit-mobile-builder-content"
+													data-vertical-menu=750px><a href="template-kit/about-us/index.html"
+														class="ekit-menu-nav-link">من نحن</a>
+													</li> -->
+												<li id="menu-item-403"
+													class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-403 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content"
+													data-vertical-menu=750px><a href="template-kit/services/index.html"
+														class="ekit-menu-nav-link ekit-menu-dropdown-toggle">من نحن<i
+															aria-hidden="true"
+															class="icon icon-down-arrow1 elementskit-submenu-indicator"></i></a>
+													<ul class="elementskit-dropdown elementskit-submenu-panel">
+														<li id="menu-item-404"
+															class="menu-item menu-item-type-custom menu-item-object-custom menu-item-404 nav-item elementskit-mobile-builder-content"
+															data-vertical-menu=750px><a
+																href="template-kit/single-service/index.html"
+																class=" dropdown-item">الرسالة والرؤية
+															</a>
+															<a href="template-kit/single-service/index.html"
+																class=" dropdown-item">قيمنا
+															</a>
+															<a href="template-kit/single-service/index.html"
+																class=" dropdown-item">أهدافنا
+															</a>
+															<a href="template-kit/single-service/index.html"
+																class=" dropdown-item">مجلس الإدارة
+															</a>
+															<a href="template-kit/single-service/index.html"
+																class=" dropdown-item">الهيئة الاستشارية
+															</a>
+													</ul>
+												</li>
 												<li id="menu-item-403"
 													class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-403 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content"
 													data-vertical-menu=750px><a href="template-kit/services/index.html"
@@ -512,10 +591,17 @@
 															class="menu-item menu-item-type-custom menu-item-object-custom menu-item-404 nav-item elementskit-mobile-builder-content"
 															data-vertical-menu=750px><a
 																href="template-kit/single-service/index.html"
-																class=" dropdown-item">Single Service</a>
+																class=" dropdown-item">الدورات التدريبية
+															</a>
+															<a href="template-kit/single-service/index.html"
+																class=" dropdown-item">الاستشارات
+															</a>
+
+
+
 													</ul>
 												</li>
-												<li id="menu-item-407"
+												<!-- <li id="menu-item-407"
 													class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-407 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content"
 													data-vertical-menu=750px><a
 														href="template-kit/case-studies/index.html"
@@ -529,7 +615,7 @@
 																href="template-kit/single-case/index.html"
 																class=" dropdown-item">Single Case</a>
 													</ul>
-												</li>
+												</li> -->
 
 												<!-- <li id="menu-item-406"
 													class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-406 nav-item elementskit-dropdown-has relative_position elementskit-dropdown-menu-default_width elementskit-mobile-builder-content"
@@ -563,12 +649,13 @@
 
 												<li id="menu-item-412"
 													class="menu-item menu-item-type-custom menu-item-object-custom menu-item-412 nav-item elementskit-mobile-builder-content"
-													data-vertical-menu=750px><a href="" class="ekit-menu-nav-link">قسم
-														التعليم</a></li>
+													data-vertical-menu=750px><a href=""
+														class="ekit-menu-nav-link">المكتبة الإلكترونية</a></li>
 												<li id="menu-item-412"
 													class="menu-item menu-item-type-custom menu-item-object-custom menu-item-412 nav-item elementskit-mobile-builder-content"
-													data-vertical-menu=750px><a href="" class="ekit-menu-nav-link">قسم
-														الصحة</a></li>
+													data-vertical-menu=750px><a href=""
+														class="ekit-menu-nav-link">المشاريع
+													</a></li>
 
 												<li id="menu-item-412"
 													class="menu-item menu-item-type-custom menu-item-object-custom menu-item-412 nav-item elementskit-mobile-builder-content"
@@ -576,6 +663,7 @@
 														class="ekit-menu-nav-link">تواصل معنا</a></li>
 
 											</ul>
+
 											<div class="elementskit-nav-identity-panel">
 												<div class="elementskit-site-title">
 													<a class="elementskit-nav-logo" href="index.html" target="_self"
@@ -587,6 +675,7 @@
 												</div><button class="elementskit-menu-close elementskit-menu-toggler"
 													type="button">X</button>
 											</div>
+
 										</div>
 										<div
 											class="elementskit-menu-overlay elementskit-menu-offcanvas-elements elementskit-menu-toggler ekit-nav-menu--overlay">
@@ -611,6 +700,10 @@
 							</div>
 						</div>
 					</div> -->
+					<div id="menu-item-412"
+						class="menu-item menu-item-type-custom menu-item-object-custom menu-item-412 nav-item elementskit-mobile-builder-content"
+						data-vertical-menu=750px><a href="" class="ekit-menu-nav-link"><i
+								class="fas fa-globe-americas ms-1"></i>En</a></div>
 				</div>
 			</div>
 		</div>
@@ -634,9 +727,9 @@
 				<div class="elementor-element elementor-element-215f9ca elementor-widget__width-initial elementor-widget elementor-widget-text-editor"
 					data-id="215f9ca" data-element_type="widget" data-widget_type="text-editor.default">
 					<div class="elementor-widget-container">
-						<p>شركة الحياة للدراسات والبحوث، شريككم الموثوق للدقة والابتكار. نقدم لكم رؤى متقدمة وتحليلات
-							موثوقة تأخذ بيدكم نحو مستقبل أكثر نجاحاً. اختبروا قوة المعرفة معنا، ودعونا نكون جزءاً من قصة
-							نجاحكم.</p>
+						<p class="mb-0">شركة الحياة للدراسات والبحوث، شريككم الموثوق للدقة والابتكار. نقدم لكم رؤى
+							متقدمة وتحليلات
+							موثوقة تأخذ بيدكم نحو مستقبل أكثر نجاحاً.</p>
 					</div>
 				</div>
 				<div class="elementor-element elementor-element-18421c5 e-con-full e-flex e-con e-child"
@@ -804,418 +897,64 @@
 				<div class="elementor-element elementor-element-8ea7a15 elementor-widget__width-initial elementor-widget elementor-widget-text-editor"
 					data-id="8ea7a15" data-element_type="widget" data-widget_type="text-editor.default">
 					<div class="elementor-widget-container">
-						<p>تركز خدماتنا على تقديم حلول بحثية واستشارية مبتكرة تعزز من أداء المؤسسات وتساهم في تحقيق أهدافها بفعالية وكفاءة عالية. نلتزم بمرافقة شركائنا في رحلتهم نحو النجاح والتميز.</p>
+						<p>تركز خدماتنا على تقديم حلول بحثية واستشارية مبتكرة تعزز من أداء المؤسسات وتساهم في تحقيق
+							أهدافها بفعالية وكفاءة عالية. نلتزم بمرافقة شركائنا في رحلتهم نحو النجاح والتميز.</p>
 					</div>
 				</div>
-				<div class="elementor-element elementor-element-b13df34 e-con-full e-flex e-con e-child"
-					data-id="b13df34" data-element_type="container">
-					<div class="elementor-element elementor-element-11d25e5 e-con-full e-flex e-con e-child"
-						data-id="11d25e5" data-element_type="container">
-						<div class="first-service elementor-element elementor-element-d65e7ae e-con-full animated-fast e-flex elementor-invisible e-con e-child"
-							data-id="d65e7ae" data-element_type="container"
-							data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}">
-							<div class="elementor-element elementor-element-92738ca e-con-full e-flex e-con e-child"
-								data-id="92738ca" data-element_type="container"
-								data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}">
-								<div class="elementor-element elementor-element-1fbdf4b ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box"
-									data-id="1fbdf4b" data-element_type="widget"
-									data-widget_type="elementskit-icon-box.default">
-									<div class="elementor-widget-container">
-										<div class="ekit-wid-con"> <!-- link opening -->
-											<a href="#" class="ekit_global_links">
-												<!-- end link opening -->
+				<div class="container services">
 
-												<div
-													class="elementskit-infobox text-right icon-lef-right-aligin elementor-animation- media  ">
-													<div class="elementskit-box-header elementor-animation-">
-														<div class="elementskit-info-box-icon  text-center">
-															<i aria-hidden="true"
-																class="elementkit-infobox-icon icon icon-menu-9"></i>
-														</div>
-													</div>
-													<div class="box-body">
-														<h3 class="elementskit-info-box-title">
-															إعداد الدراسات والأبحاث
-														</h3>
-													</div>
+					<ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+						<li class="nav-item" role="presentation">
+							<button class="nav-link active" id="courses-tab" data-bs-toggle="tab"
+								data-bs-target="#courses" type="button" role="tab" aria-controls="courses"
+								aria-selected="true">
+								الدورات التدريبية
+							</button>
+						</li>
+						<li class="nav-item" role="presentation">
+							<button class="nav-link" id="consultations-tab" data-bs-toggle="tab"
+								data-bs-target="#consultations" type="button" role="tab" aria-controls="consultations"
+								aria-selected="false">
+								الاستشارات
+							</button>
+						</li>
+						<!-- <li class="nav-item" role="presentation">
+							<button class="nav-link" id="projects-tab" data-bs-toggle="tab" data-bs-target="#projects"
+								type="button" role="tab" aria-controls="projects" aria-selected="false">
+								المشاريع
+							</button>
+						</li> -->
+					</ul>
 
-
-												</div>
-											</a>
-										</div>
-									</div>
-								</div>
-								<div class="elementor-element elementor-element-a868144 elementor-widget elementor-widget-text-editor"
-									data-id="a868144" data-element_type="widget" data-widget_type="text-editor.default">
-									<div class="elementor-widget-container">
-										<p>تقديم دراسات وأبحاث متخصصة تهدف إلى تحليل التحديات وتقديم حلول مبتكرة تدعم
-											المؤسسات في تحقيق أهدافها.
-
-										</p>
-									</div>
-								</div>
-
-
-							</div>
+					<!-- Tabs Content -->
+					<div class="tab-content" id="myTabContent">
+						<!-- الدورات التدريبية -->
+						<div class="tab-pane fade show active p-4" id="courses" role="tabpanel"
+							aria-labelledby="courses-tab">
+							<h4>الدورات التدريبية</h4>
+							<p>نقدم مجموعة متنوعة من الدورات التدريبية المصممة لتعزيز مهاراتك ورفع كفاءتك في مختلف
+								المجالات.</p>
 						</div>
-						<div class="elementor-element elementor-element-537a2c7 e-con-full e-flex elementor-invisible e-con e-child"
-							data-id="537a2c7" data-element_type="container"
-							data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}">
-							<div class="elementor-element elementor-element-597f259 e-con-full e-flex e-con e-child"
-								data-id="597f259" data-element_type="container"
-								data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-								<div class="elementor-element elementor-element-cd97998 ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box"
-									data-id="cd97998" data-element_type="widget"
-									data-widget_type="elementskit-icon-box.default">
-									<div class="elementor-widget-container">
-										<div class="ekit-wid-con"> <!-- link opening -->
-											<a href="#" class="ekit_global_links">
-												<!-- end link opening -->
-
-												<div
-													class="elementskit-infobox text-right icon-lef-right-aligin elementor-animation- media  ">
-													<div class="elementskit-box-header elementor-animation-">
-														<div class="elementskit-info-box-icon  text-center">
-															<i aria-hidden="true"
-																class="elementkit-infobox-icon icon icon-line-chart"></i>
-														</div>
-													</div>
-													<div class="box-body">
-														<h3 class="elementskit-info-box-title">
-															إعداد الخطط الاستراتيجية
-														</h3>
-													</div>
-
-
-												</div>
-											</a>
-										</div>
-									</div>
-								</div>
-								<div class="elementor-element elementor-element-4af3fbb elementor-widget elementor-widget-text-editor"
-									data-id="4af3fbb" data-element_type="widget" data-widget_type="text-editor.default">
-									<div class="elementor-widget-container">
-										<p>
-											تطوير خطط استراتيجية مدروسة تمكّن المؤسسات من تحقيق رؤاها وأهدافها بفعالية
-											ووضوح.
-
-
-										</p>
-									</div>
-								</div>
-
-							</div>
+						<!-- الاستشارات -->
+						<div class="tab-pane fade p-4" id="consultations" role="tabpanel"
+							aria-labelledby="consultations-tab">
+							<h4>الاستشارات</h4>
+							<p>نوفر خدمات استشارية متميزة تساعدك في اتخاذ القرارات الصحيحة وتحقيق أهدافك بنجاح.</p>
 						</div>
-					</div>
-					<div class="elementor-element elementor-element-da33a4b e-con-full e-flex e-con e-child"
-						data-id="da33a4b" data-element_type="container">
-						<div class="elementor-element elementor-element-0389c82 e-con-full animated-slow e-flex elementor-invisible e-con e-child"
-							data-id="0389c82" data-element_type="container"
-							data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;animation_delay&quot;:0}">
-							<div class="elementor-element elementor-element-6753917 e-con-full e-flex e-con e-child"
-								data-id="6753917" data-element_type="container"
-								data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-								<div class="elementor-element elementor-element-6e979fc ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box"
-									data-id="6e979fc" data-element_type="widget"
-									data-widget_type="elementskit-icon-box.default">
-									<div class="elementor-widget-container">
-										<div class="ekit-wid-con"> <!-- link opening -->
-											<a href="#" class="ekit_global_links">
-												<!-- end link opening -->
-
-												<div
-													class="elementskit-infobox text-right icon-lef-right-aligin elementor-animation- media  ">
-													<div class="elementskit-box-header elementor-animation-">
-														<div class="elementskit-info-box-icon  text-center">
-															<i aria-hidden="true"
-																class="elementkit-infobox-icon icon icon-folder2"></i>
-														</div>
-													</div>
-													<div class="box-body">
-														<h3 class="elementskit-info-box-title">
-															بناء القدرات المؤسسية
-														</h3>
-													</div>
-
-
-												</div>
-											</a>
-										</div>
-									</div>
-								</div>
-								<div class="elementor-element elementor-element-46aec7e elementor-widget elementor-widget-text-editor"
-									data-id="46aec7e" data-element_type="widget" data-widget_type="text-editor.default">
-									<div class="elementor-widget-container">
-										<p>
-											تقديم برامج تدريبية متخصصة تهدف إلى تعزيز القدرات المؤسسية ورفع كفاءة
-											الموظفين لتحقيق أداء متميز.
-
-										</p>
-									</div>
-								</div>
-
-							</div>
-						</div>
-						<div class=" elementor-element elementor-element-dcf0a9a e-con-full animated-slow e-flex elementor-invisible e-con e-child"
-							data-id="dcf0a9a" data-element_type="container"
-							data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;animation_delay&quot;:200}">
-							<div class="elementor-element elementor-element-b578784 e-con-full e-flex e-con e-child"
-								data-id="b578784" data-element_type="container"
-								data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-								<div class="elementor-element elementor-element-e8c85b0 ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box"
-									data-id="e8c85b0" data-element_type="widget"
-									data-widget_type="elementskit-icon-box.default">
-									<div class="elementor-widget-container">
-										<div class="ekit-wid-con"> <!-- link opening -->
-											<a href="#" class="ekit_global_links">
-												<!-- end link opening -->
-
-												<div
-													class="elementskit-infobox text-right icon-lef-right-aligin elementor-animation- media  ">
-													<div class="elementskit-box-header elementor-animation-">
-														<div class="elementskit-info-box-icon  text-center">
-															<i aria-hidden="true"
-																class="elementkit-infobox-icon icon icon-open-book"></i>
-														</div>
-													</div>
-													<div class="box-body">
-														<h3 class="elementskit-info-box-title">
-															مهارات التدريب والتيسير
-
-														</h3>
-													</div>
-
-
-												</div>
-											</a>
-										</div>
-									</div>
-								</div>
-								<div class="elementor-element elementor-element-fa92254 elementor-widget elementor-widget-text-editor"
-									data-id="fa92254" data-element_type="widget" data-widget_type="text-editor.default">
-									<div class="elementor-widget-container">
-										<p>
-											تنظيم ورش عمل ودورات تدريبية تركز على تطوير مهارات التدريب والتيسير لضمان
-											انتقال المعرفة بطرق فعّالة.
-										</p>
-									</div>
-								</div>
-
-							</div>
+						<!-- المشاريع -->
+						<div class="tab-pane fade p-4" id="projects" role="tabpanel" aria-labelledby="projects-tab">
+							<h4>المشاريع</h4>
+							<p>ننفذ مشاريع مبتكرة ومستدامة تساهم في تحسين المجتمع وتحقيق التنمية.</p>
 						</div>
 					</div>
 				</div>
 
-
-
-
-
-
-				<div class="elementor-element elementor-element-b13df34 e-con-full e-flex e-con e-child"
-					data-id="b13df34" data-element_type="container">
-					<div class="elementor-element elementor-element-11d25e5 e-con-full e-flex e-con e-child"
-						data-id="11d25e5" data-element_type="container">
-						<div class=" elementor-element elementor-element-d65e7ae e-con-full animated-fast e-flex elementor-invisible e-con e-child"
-							data-id="d65e7ae" data-element_type="container"
-							data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}">
-							<div class="elementor-element elementor-element-92738ca e-con-full e-flex e-con e-child"
-								data-id="92738ca" data-element_type="container"
-								data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}">
-								<div class="elementor-element elementor-element-1fbdf4b ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box"
-									data-id="1fbdf4b" data-element_type="widget"
-									data-widget_type="elementskit-icon-box.default">
-									<div class="elementor-widget-container">
-										<div class="ekit-wid-con"> <!-- link opening -->
-											<a href="#" class="ekit_global_links">
-												<!-- end link opening -->
-
-												<div
-													class="elementskit-infobox text-right icon-lef-right-aligin elementor-animation- media  ">
-													<div class="elementskit-box-header elementor-animation-">
-														<div class="elementskit-info-box-icon  text-center">
-															<i aria-hidden="true"
-																class="elementkit-infobox-icon icon icon-menu-9"></i>
-														</div>
-													</div>
-													<div class="box-body">
-														<h3 class="elementskit-info-box-title">
-															تقييم المشاريع
-														</h3>
-													</div>
-
-
-												</div>
-											</a>
-										</div>
-									</div>
-								</div>
-								<div class="elementor-element elementor-element-a868144 elementor-widget elementor-widget-text-editor"
-									data-id="a868144" data-element_type="widget" data-widget_type="text-editor.default">
-									<div class="elementor-widget-container">
-										<p>
-											إجراء تقييم شامل للمشاريع لمساعدة المؤسسات على قياس الأثر وتحديد فرص التحسين
-											لتحقيق النتائج المرجوة.
-
-										</p>
-									</div>
-								</div>
-
-
-							</div>
-						</div>
-						<div class="elementor-element elementor-element-537a2c7 e-con-full e-flex elementor-invisible e-con e-child"
-							data-id="537a2c7" data-element_type="container"
-							data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;}">
-							<div class="elementor-element elementor-element-597f259 e-con-full e-flex e-con e-child"
-								data-id="597f259" data-element_type="container"
-								data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-								<div class="elementor-element elementor-element-cd97998 ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box"
-									data-id="cd97998" data-element_type="widget"
-									data-widget_type="elementskit-icon-box.default">
-									<div class="elementor-widget-container">
-										<div class="ekit-wid-con"> <!-- link opening -->
-											<a href="#" class="ekit_global_links">
-												<!-- end link opening -->
-
-												<div
-													class="elementskit-infobox text-right icon-lef-right-aligin elementor-animation- media  ">
-													<div class="elementskit-box-header elementor-animation-">
-														<div class="elementskit-info-box-icon  text-center">
-															<i aria-hidden="true"
-																class="elementkit-infobox-icon icon icon-line-chart"></i>
-														</div>
-													</div>
-													<div class="box-body">
-														<h3 class="elementskit-info-box-title">
-															خطط المتابعة والتقييم </h3>
-													</div>
-
-
-												</div>
-											</a>
-										</div>
-									</div>
-								</div>
-								<div class="elementor-element elementor-element-4af3fbb elementor-widget elementor-widget-text-editor"
-									data-id="4af3fbb" data-element_type="widget" data-widget_type="text-editor.default">
-									<div class="elementor-widget-container">
-										<p>
-											تطوير خطط متابعة وتقييم لضمان تحقيق الأهداف المرجوة وتحسين الأداء المؤسسي
-											المستمر.
-
-										</p>
-									</div>
-								</div>
-
-							</div>
-						</div>
-					</div>
-					<div class="elementor-element elementor-element-da33a4b e-con-full e-flex e-con e-child"
-						data-id="da33a4b" data-element_type="container">
-						<div class="elementor-element elementor-element-0389c82 e-con-full animated-slow e-flex elementor-invisible e-con e-child"
-							data-id="0389c82" data-element_type="container"
-							data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;animation_delay&quot;:0}">
-							<div class="elementor-element elementor-element-6753917 e-con-full e-flex e-con e-child"
-								data-id="6753917" data-element_type="container"
-								data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-								<div class="elementor-element elementor-element-6e979fc ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box"
-									data-id="6e979fc" data-element_type="widget"
-									data-widget_type="elementskit-icon-box.default">
-									<div class="elementor-widget-container">
-										<div class="ekit-wid-con"> <!-- link opening -->
-											<a href="#" class="ekit_global_links">
-												<!-- end link opening -->
-
-												<div
-													class="elementskit-infobox text-right icon-lef-right-aligin elementor-animation- media  ">
-													<div class="elementskit-box-header elementor-animation-">
-														<div class="elementskit-info-box-icon  text-center">
-															<i aria-hidden="true"
-																class="elementkit-infobox-icon icon icon-folder2"></i>
-														</div>
-													</div>
-													<div class="box-body">
-														<h3 class="elementskit-info-box-title">
-															خطط تجنيد الأموال </h3>
-													</div>
-
-
-												</div>
-											</a>
-										</div>
-									</div>
-								</div>
-								<div class="elementor-element elementor-element-46aec7e elementor-widget elementor-widget-text-editor"
-									data-id="46aec7e" data-element_type="widget" data-widget_type="text-editor.default">
-									<div class="elementor-widget-container">
-										<p>
-											تصميم استراتيجيات تجنيد الأموال لمساعدة المؤسسات في تأمين الموارد المالية
-											اللازمة لدعم برامجها ومشاريعها.
-
-
-
-										</p>
-									</div>
-								</div>
-
-							</div>
-						</div>
-						<div class=" elementor-element elementor-element-dcf0a9a e-con-full animated-slow e-flex elementor-invisible e-con e-child"
-							data-id="dcf0a9a" data-element_type="container"
-							data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;animation_delay&quot;:200}">
-							<div class="elementor-element elementor-element-b578784 e-con-full e-flex e-con e-child"
-								data-id="b578784" data-element_type="container"
-								data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-								<div class="elementor-element elementor-element-e8c85b0 ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box"
-									data-id="e8c85b0" data-element_type="widget"
-									data-widget_type="elementskit-icon-box.default">
-									<div class="elementor-widget-container">
-										<div class="ekit-wid-con"> <!-- link opening -->
-											<a href="#" class="ekit_global_links">
-												<!-- end link opening -->
-
-												<div
-													class="elementskit-infobox text-right icon-lef-right-aligin elementor-animation- media  ">
-													<div class="elementskit-box-header elementor-animation-">
-														<div class="elementskit-info-box-icon  text-center">
-															<i aria-hidden="true"
-																class="elementkit-infobox-icon icon icon-open-book"></i>
-														</div>
-													</div>
-													<div class="box-body">
-														<h3 class="elementskit-info-box-title">
-															إعداد الكتيبات وأدلة التدريب
-
-														</h3>
-													</div>
-
-
-												</div>
-											</a>
-										</div>
-									</div>
-								</div>
-								<div class="elementor-element elementor-element-fa92254 elementor-widget elementor-widget-text-editor"
-									data-id="fa92254" data-element_type="widget" data-widget_type="text-editor.default">
-									<div class="elementor-widget-container">
-										<p>
-											نفيذ خطط متابعة وتقييم شاملة للمشاريع للتأكد من تحقيق الأهداف المرجوة وتحسين
-											الأداء المؤسسي بشكل مستمر.
-
-										</p>
-									</div>
-								</div>
-
-							</div>
-						</div>
-					</div>
-				</div>
 			</div>
 		</div>
 
 
 		<div class="elementor-element elementor-element-178afa6 e-flex e-con-boxed e-con e-parent" data-id="178afa6"
-			data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}">
+			data-element_type="container" data-settings="{}">
 			<div class="e-con-inner">
 				<div class="elementor-element elementor-element-fdf1eb7 e-con-full e-flex e-con e-child"
 					data-id="fdf1eb7" data-element_type="container">
@@ -1278,7 +1017,10 @@
 					<div class="elementor-element elementor-element-23fde37 elementor-widget elementor-widget-heading"
 						data-id="23fde37" data-element_type="widget" data-widget_type="heading.default">
 						<div class="elementor-widget-container">
-							<h6 class="elementor-heading-title elementor-size-default">في شركة الحياة للدراسات والبحوث، نسعى لتحقيق التميز في تقديم حلول استشارية وبحثية تدعم المؤسسات في تطوير مجالات التعليم، الصحة، والبيئة. نعتمد على أسس علمية قوية وطرق بحث مبتكرة لضمان تحقيق أفضل النتائج وتلبية احتياجات المجتمع والمؤسسات بشكل مستدام.
+							<h6 class="elementor-heading-title elementor-size-default">في شركة الحياة للدراسات والبحوث،
+								نسعى لتحقيق التميز في تقديم حلول استشارية وبحثية تدعم المؤسسات في تطوير مجالات التعليم،
+								الصحة، والبيئة. نعتمد على أسس علمية قوية وطرق بحث مبتكرة لضمان تحقيق أفضل النتائج وتلبية
+								احتياجات المجتمع والمؤسسات بشكل مستدام.
 
 							</h6>
 						</div>
@@ -1286,7 +1028,10 @@
 					<div class="elementor-element elementor-element-bca3fb8 elementor-widget elementor-widget-text-editor"
 						data-id="bca3fb8" data-element_type="widget" data-widget_type="text-editor.default">
 						<div class="elementor-widget-container">
-							<p>نلتزم بتقديم خدمات متميزة تجمع بين الخبرة والدقة، حيث تشمل خدماتنا إعداد الدراسات، التخطيط الاستراتيجي، بناء القدرات المؤسسية، وتطوير خطط تجنيد الأموال، إضافة إلى مهارات التدريب والتيسير وتقييم المشاريع. نهدف من خلال كل هذه الخدمات إلى إحداث تأثير إيجابي مستدام يسهم في بناء مستقبل أفضل.
+							<p>نلتزم بتقديم خدمات متميزة تجمع بين الخبرة والدقة، حيث تشمل خدماتنا إعداد الدراسات،
+								التخطيط الاستراتيجي، بناء القدرات المؤسسية، وتطوير خطط تجنيد الأموال، إضافة إلى مهارات
+								التدريب والتيسير وتقييم المشاريع. نهدف من خلال كل هذه الخدمات إلى إحداث تأثير إيجابي
+								مستدام يسهم في بناء مستقبل أفضل.
 
 							</p>
 						</div>
@@ -1335,7 +1080,8 @@
 														d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z">
 													</path>
 												</svg> </span>
-											<span class="elementor-icon-list-text">الالتزام بمعايير الجودة العالمية</span>
+											<span class="elementor-icon-list-text">الالتزام بمعايير الجودة
+												العالمية</span>
 										</li>
 										<li class="elementor-icon-list-item">
 											<span class="elementor-icon-list-icon">
@@ -1356,7 +1102,8 @@
 														d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z">
 													</path>
 												</svg> </span>
-											<span class="elementor-icon-list-text">دعم اتخاذ قرارات مدروسة ومبنية على أبحاث</span>
+											<span class="elementor-icon-list-text">دعم اتخاذ قرارات مدروسة ومبنية على
+												أبحاث</span>
 										</li>
 										<li class="elementor-icon-list-item">
 											<span class="elementor-icon-list-icon">
@@ -1403,548 +1150,24 @@
 
 
 
-		<div class="why-choose-us elementor-element elementor-element-66be217 e-flex e-con-boxed e-con e-parent"
-			data-id="66be217" data-element_type="container">
-			<div class="e-con-inner">
-				<div class="elementor-element elementor-element-e616712 e-con-full e-flex e-con e-child"
-					data-id="e616712" data-element_type="container">
-					<div class="elementor-element elementor-element-33e4f56 elementor-widget elementor-widget-heading"
-						data-id="33e4f56" data-element_type="widget" data-widget_type="heading.default">
-						<div class="elementor-widget-container">
-							<h5 class="elementor-heading-title elementor-size-default">Why Choose Us</h5>
-						</div>
-					</div>
-					<div class="elementor-element elementor-element-be64e0d elementor-widget elementor-widget-heading"
-						data-id="be64e0d" data-element_type="widget" data-widget_type="heading.default">
-						<div class="elementor-widget-container">
-							<h2 class="elementor-heading-title elementor-size-default">Preferred Global Insights Partner
-							</h2>
-						</div>
-					</div>
-					<div class="elementor-element elementor-element-7401f3f elementor-widget elementor-widget-text-editor"
-						data-id="7401f3f" data-element_type="widget" data-widget_type="text-editor.default">
-						<div class="elementor-widget-container">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada nibh ipsum, id
-								eleifend elit sodales in. Etiam consequat tortor sed felis ornare, et pulvinar leo
-								consequat. In hac habitasse platea dictumst. Fusce eget pulvinar erat.</p>
-						</div>
-					</div>
-					<div class="elementor-element elementor-element-e21fa45 elementor-widget elementor-widget-elementskit-progressbar"
-						data-id="e21fa45" data-element_type="widget" data-widget_type="elementskit-progressbar.default">
-						<div class="elementor-widget-container">
-							<div class="ekit-wid-con">
-								<div class="waypoint-tigger">
-									<div class="skillbar-group " data-progress-bar="">
-										<div class="single-skill-bar">
-											<div class="skill-bar-content">
-												<span class="skill-title">WordPress</span>
-											</div><!-- .skill-bar-content END -->
-											<div class="skill-bar">
-												<div class="skill-track">
 
-													<div class="number-percentage-wraper">
-														<span class="number-percentage" data-value="85"
-															data-animation-duration="3500">0</span>%
-
-													</div>
-												</div>
-											</div><!-- .skill-bar END -->
-										</div><!-- .single-skill-bar END -->
-									</div><!-- .skillbar-group END -->
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="elementor-element elementor-element-6df5fff elementor-widget elementor-widget-elementskit-progressbar"
-						data-id="6df5fff" data-element_type="widget" data-widget_type="elementskit-progressbar.default">
-						<div class="elementor-widget-container">
-							<div class="ekit-wid-con">
-								<div class="waypoint-tigger">
-									<div class="skillbar-group " data-progress-bar="">
-										<div class="single-skill-bar">
-											<div class="skill-bar-content">
-												<span class="skill-title">WordPress</span>
-											</div><!-- .skill-bar-content END -->
-											<div class="skill-bar">
-												<div class="skill-track">
-
-													<div class="number-percentage-wraper">
-														<span class="number-percentage" data-value="98"
-															data-animation-duration="3500">0</span>%
-
-													</div>
-												</div>
-											</div><!-- .skill-bar END -->
-										</div><!-- .single-skill-bar END -->
-									</div><!-- .skillbar-group END -->
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="elementor-element elementor-element-e27c40d elementor-widget elementor-widget-elementskit-progressbar"
-						data-id="e27c40d" data-element_type="widget" data-widget_type="elementskit-progressbar.default">
-						<div class="elementor-widget-container">
-							<div class="ekit-wid-con">
-								<div class="waypoint-tigger">
-									<div class="skillbar-group " data-progress-bar="">
-										<div class="single-skill-bar">
-											<div class="skill-bar-content">
-												<span class="skill-title">WordPress</span>
-											</div><!-- .skill-bar-content END -->
-											<div class="skill-bar">
-												<div class="skill-track">
-
-													<div class="number-percentage-wraper">
-														<span class="number-percentage" data-value="91"
-															data-animation-duration="3500">0</span>%
-
-													</div>
-												</div>
-											</div><!-- .skill-bar END -->
-										</div><!-- .single-skill-bar END -->
-									</div><!-- .skillbar-group END -->
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="elementor-element elementor-element-019d7b1 e-con-full e-flex e-con e-child"
-					data-id="019d7b1" data-element_type="container">
-					<div class="elementor-element elementor-element-1e5937f e-con-full e-flex e-con e-child"
-						data-id="1e5937f" data-element_type="container">
-						<div class="elementor-element elementor-element-bcc15b4 elementor-widget elementor-widget-video"
-							data-id="bcc15b4" data-element_type="widget"
-							data-settings="{&quot;youtube_url&quot;:&quot;#&quot;,&quot;show_image_overlay&quot;:&quot;yes&quot;,&quot;image_overlay&quot;:{&quot;url&quot;:&quot;https:\/\/askit.dextheme.net\/riset\/wp-content\/uploads\/sites\/16\/2024\/06\/6S8RVKW.jpg&quot;,&quot;id&quot;:23,&quot;size&quot;:&quot;&quot;,&quot;alt&quot;:&quot;&quot;,&quot;source&quot;:&quot;library&quot;},&quot;video_type&quot;:&quot;youtube&quot;,&quot;controls&quot;:&quot;yes&quot;}"
-							data-widget_type="video.default">
-							<div class="elementor-widget-container">
-								<div class="elementor-wrapper elementor-open-inline">
-									<div class="elementor-video"></div>
-									<div class="elementor-custom-embed-image-overlay"
-										style="background-image: url(wp-content/uploads/sites/16/2024/06/6S8RVKW.jpg);">
-										<div class="elementor-custom-embed-play" role="button" aria-label="Play Video"
-											tabindex="0">
-											<svg aria-hidden="true" class="e-font-icon-svg e-eicon-play"
-												viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
-												<path
-													d="M838 162C746 71 633 25 500 25 371 25 258 71 163 162 71 254 25 367 25 500 25 633 71 746 163 837 254 929 367 979 500 979 633 979 746 933 838 837 929 746 975 633 975 500 975 367 929 254 838 162M808 192C892 279 933 379 933 500 933 621 892 725 808 808 725 892 621 938 500 938 379 938 279 896 196 808 113 725 67 621 67 500 67 379 108 279 196 192 279 108 383 62 500 62 621 62 721 108 808 192M438 392V642L642 517 438 392Z">
-												</path>
-											</svg> <span class="elementor-screen-only">Play Video</span>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-
-		<div class="statistics elementor-element elementor-element-dea6712 e-flex e-con-boxed e-con e-parent"
-			data-id="dea6712" data-element_type="container">
-			<div class="e-con-inner">
-				<div class="elementor-element elementor-element-46a54ad e-con-full e-flex e-con e-child"
-					data-id="46a54ad" data-element_type="container">
-					<div class="elementor-element elementor-element-0c53072 e-con-full e-flex e-con e-child"
-						data-id="0c53072" data-element_type="container">
-						<div class="elementor-element elementor-element-1474f0b e-con-full e-flex e-con e-child"
-							data-id="1474f0b" data-element_type="container">
-							<div class="elementor-element elementor-element-c5796db elementor-widget-mobile__width-initial elementor-widget elementor-widget-image"
-								data-id="c5796db" data-element_type="widget" data-widget_type="image.default">
-								<div class="elementor-widget-container">
-									<img loading="lazy" decoding="async" width="300" height="300"
-										src="wp-content/uploads/sites/16/2024/06/D6D7UW7a1.png"
-										class="attachment-full size-full wp-image-92" alt=""
-										srcset="wp-content/uploads/sites/16/2024/06/D6D7UW7a1.png 300w, wp-content/uploads/sites/16/2024/06/D6D7UW7a1-150x150.png 150w"
-										sizes="(max-width: 300px) 100vw, 300px" />
-								</div>
-							</div>
-						</div>
-						<div class="elementor-element elementor-element-d4737a0 e-con-full e-flex e-con e-child"
-							data-id="d4737a0" data-element_type="container">
-							<div class="elementor-element elementor-element-fa6d29d elementor-widget elementor-widget-counter"
-								data-id="fa6d29d" data-element_type="widget" data-widget_type="counter.default">
-								<div class="elementor-widget-container">
-									<div class="elementor-counter">
-										<div class="elementor-counter-number-wrapper">
-											<span class="elementor-counter-number-prefix">+</span>
-											<span class="elementor-counter-number" data-duration="2000"
-												data-to-value="42" data-from-value="0" data-delimiter=",">0</span>
-											<span class="elementor-counter-number-suffix"></span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="elementor-element elementor-element-c2c023d elementor-widget elementor-widget-heading"
-								data-id="c2c023d" data-element_type="widget" data-widget_type="heading.default">
-								<div class="elementor-widget-container">
-									<h4 class="elementor-heading-title elementor-size-default">دولة متصلة</h4>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="elementor-element elementor-element-e9f419a e-con-full e-flex e-con e-child"
-						data-id="e9f419a" data-element_type="container">
-						<div class="elementor-element elementor-element-4fccf2c e-con-full e-flex e-con e-child"
-							data-id="4fccf2c" data-element_type="container">
-							<div class="elementor-element elementor-element-49f3add elementor-widget-mobile__width-initial elementor-widget elementor-widget-image"
-								data-id="49f3add" data-element_type="widget" data-widget_type="image.default">
-								<div class="elementor-widget-container">
-									<img loading="lazy" decoding="async" width="300" height="300"
-										src="wp-content/uploads/sites/16/2024/06/D6D7UW7b.png"
-										class="attachment-full size-full wp-image-113" alt=""
-										srcset="wp-content/uploads/sites/16/2024/06/D6D7UW7b.png 300w, wp-content/uploads/sites/16/2024/06/D6D7UW7b-150x150.png 150w"
-										sizes="(max-width: 300px) 100vw, 300px" />
-								</div>
-							</div>
-						</div>
-						<div class="elementor-element elementor-element-f445e7e e-con-full e-flex e-con e-child"
-							data-id="f445e7e" data-element_type="container">
-							<div class="elementor-element elementor-element-2051713 elementor-widget elementor-widget-counter"
-								data-id="2051713" data-element_type="widget" data-widget_type="counter.default">
-								<div class="elementor-widget-container">
-									<div class="elementor-counter">
-										<div class="elementor-counter-number-wrapper">
-											<span class="elementor-counter-number-prefix">+</span>
-											<span class="elementor-counter-number" data-duration="2000"
-												data-to-value="57" data-from-value="0" data-delimiter=",">0</span>
-											<span class="elementor-counter-number-suffix"></span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="elementor-element elementor-element-0fca7bb elementor-widget elementor-widget-heading"
-								data-id="0fca7bb" data-element_type="widget" data-widget_type="heading.default">
-								<div class="elementor-widget-container">
-									<h4 class="elementor-heading-title elementor-size-default">لغات أجنبية</h4>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="elementor-element elementor-element-3235603 e-con-full e-flex e-con e-child"
-					data-id="3235603" data-element_type="container">
-					<div class="elementor-element elementor-element-d551945 e-con-full e-flex e-con e-child"
-						data-id="d551945" data-element_type="container">
-						<div class="elementor-element elementor-element-a6a7836 e-con-full e-flex e-con e-child"
-							data-id="a6a7836" data-element_type="container">
-							<div class="elementor-element elementor-element-8b306df elementor-widget-mobile__width-initial elementor-widget elementor-widget-image"
-								data-id="8b306df" data-element_type="widget" data-widget_type="image.default">
-								<div class="elementor-widget-container">
-									<img loading="lazy" decoding="async" width="300" height="300"
-										src="wp-content/uploads/sites/16/2024/06/D6D7UW7c.png"
-										class="attachment-full size-full wp-image-114" alt=""
-										srcset="wp-content/uploads/sites/16/2024/06/D6D7UW7c.png 300w, wp-content/uploads/sites/16/2024/06/D6D7UW7c-150x150.png 150w"
-										sizes="(max-width: 300px) 100vw, 300px" />
-								</div>
-							</div>
-						</div>
-						<div class="elementor-element elementor-element-1e0bec6 e-con-full e-flex e-con e-child"
-							data-id="1e0bec6" data-element_type="container">
-							<div class="elementor-element elementor-element-ce10e2b elementor-widget elementor-widget-counter"
-								data-id="ce10e2b" data-element_type="widget" data-widget_type="counter.default">
-								<div class="elementor-widget-container">
-									<div class="elementor-counter">
-										<div class="elementor-counter-number-wrapper">
-											<span class="elementor-counter-number-prefix"></span>
-											<span class="elementor-counter-number" data-duration="2000"
-												data-to-value="34" data-from-value="0" data-delimiter=",">0</span>
-											<span class="elementor-counter-number-suffix">+</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="elementor-element elementor-element-b5863cc elementor-widget elementor-widget-heading"
-								data-id="b5863cc" data-element_type="widget" data-widget_type="heading.default">
-								<div class="elementor-widget-container">
-									<h4 class="elementor-heading-title elementor-size-default">سنوات من الخبرة</h4>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="elementor-element elementor-element-da7cb14 e-con-full e-flex e-con e-child"
-						data-id="da7cb14" data-element_type="container">
-						<div class="elementor-element elementor-element-41b7b45 e-con-full e-flex e-con e-child"
-							data-id="41b7b45" data-element_type="container">
-							<div class="elementor-element elementor-element-982a580 elementor-widget-mobile__width-initial elementor-widget elementor-widget-image"
-								data-id="982a580" data-element_type="widget" data-widget_type="image.default">
-								<div class="elementor-widget-container">
-									<img loading="lazy" decoding="async" width="300" height="300"
-										src="wp-content/uploads/sites/16/2024/06/D6D7UW7d.png"
-										class="attachment-full size-full wp-image-115" alt=""
-										srcset="wp-content/uploads/sites/16/2024/06/D6D7UW7d.png 300w, wp-content/uploads/sites/16/2024/06/D6D7UW7d-150x150.png 150w"
-										sizes="(max-width: 300px) 100vw, 300px" />
-								</div>
-							</div>
-						</div>
-						<div class="elementor-element elementor-element-0b0f39a e-con-full e-flex e-con e-child"
-							data-id="0b0f39a" data-element_type="container">
-							<div class="elementor-element elementor-element-bbc6ea5 elementor-widget elementor-widget-counter"
-								data-id="bbc6ea5" data-element_type="widget" data-widget_type="counter.default">
-								<div class="elementor-widget-container">
-									<div class="elementor-counter">
-										<div class="elementor-counter-number-wrapper">
-											<span class="elementor-counter-number-prefix">+</span>
-											<span class="elementor-counter-number" data-duration="2000"
-												data-to-value="120" data-from-value="0" data-delimiter=",">0</span>
-											<span class="elementor-counter-number-suffix"></span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="elementor-element elementor-element-aa8c823 elementor-widget elementor-widget-heading"
-								data-id="aa8c823" data-element_type="widget" data-widget_type="heading.default">
-								<div class="elementor-widget-container">
-									<h4 class="elementor-heading-title elementor-size-default">موظفون موثوقون</h4>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="our-research-methods elementor-element elementor-element-0159e08 e-flex e-con-boxed e-con e-parent"
-			data-id="0159e08" data-element_type="container"
-			data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-			<div class="e-con-inner">
-				<div class="elementor-element elementor-element-ab7eb88 elementor-widget elementor-widget-heading"
-					data-id="ab7eb88" data-element_type="widget" data-widget_type="heading.default">
-					<div class="elementor-widget-container">
-						<h5 class=" elementor-heading-title elementor-size-default">أساليبنا البحثية
-						</h5>
-					</div>
-				</div>
-				<div class="elementor-element elementor-element-58a47be elementor-widget elementor-widget-heading"
-					data-id="58a47be" data-element_type="widget" data-widget_type="heading.default">
-					<div class="elementor-widget-container">
-						<h2 class="elementor-heading-title elementor-size-default">أساليب البحث الاستراتيجي</h2>
-					</div>
-				</div>
-				<div class="elementor-element elementor-element-8623c8e e-con-full e-flex e-con e-child"
-					data-id="8623c8e" data-element_type="container">
-					<div class="elementor-element elementor-element-a332baf e-con-full e-flex e-con e-child"
-						data-id="a332baf" data-element_type="container">
-						<div class="elementor-element elementor-element-bd754f3 elementor-widget elementor-widget-heading"
-							data-id="bd754f3" data-element_type="widget" data-widget_type="heading.default">
-							<div class="elementor-widget-container">
-								<h3 class="elementor-heading-title elementor-size-default">البحوث الكمية</h3>
-							</div>
-						</div>
-						<div class="elementor-element elementor-element-e5742bf e-con-full e-flex e-con e-child"
-							data-id="e5742bf" data-element_type="container">
-							<div class="elementor-element elementor-element-2ab98ce e-con-full e-flex e-con e-child"
-								data-id="2ab98ce" data-element_type="container">
-								<div class="elementor-element elementor-element-00911b9 elementor-widget-mobile__width-initial elementor-widget elementor-widget-image"
-									data-id="00911b9" data-element_type="widget" data-widget_type="image.default">
-									<div class="elementor-widget-container">
-										<img loading="lazy" decoding="async" width="300" height="300"
-											src="wp-content/uploads/sites/16/2024/06/WE2D4H8a1.png"
-											class="attachment-full size-full wp-image-261" alt=""
-											srcset="wp-content/uploads/sites/16/2024/06/WE2D4H8a1.png 300w, wp-content/uploads/sites/16/2024/06/WE2D4H8a1-150x150.png 150w"
-											sizes="(max-width: 300px) 100vw, 300px" />
-									</div>
-								</div>
-							</div>
-							<div class="elementor-element elementor-element-ec5f258 e-con-full e-flex e-con e-child"
-								data-id="ec5f258" data-element_type="container">
-								<div class="elementor-element elementor-element-1ec103e elementor-vertical-align-top elementor-widget elementor-widget-image-box"
-									data-id="1ec103e" data-element_type="widget" data-widget_type="image-box.default">
-									<div class="elementor-widget-container">
-										<div class="elementor-image-box-wrapper">
-											<div class="elementor-image-box-content">
-												<h4 class="elementor-image-box-title">المقابلات الهاتفية</h4>
-												<p class="elementor-image-box-description">جمع البيانات بسرعة وفعالية من خلال تواصل مباشر مع الجمهور.</p>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="elementor-element elementor-element-75b55b0 e-con-full e-flex e-con e-child"
-							data-id="75b55b0" data-element_type="container">
-							<div class="elementor-element elementor-element-1d549ae e-con-full e-flex e-con e-child"
-								data-id="1d549ae" data-element_type="container">
-								<div class="elementor-element elementor-element-7c4df02 elementor-widget-mobile__width-initial elementor-widget elementor-widget-image"
-									data-id="7c4df02" data-element_type="widget" data-widget_type="image.default">
-									<div class="elementor-widget-container">
-										<img loading="lazy" decoding="async" width="300" height="300"
-											src="wp-content/uploads/sites/16/2024/06/WE2D4H8b.png"
-											class="attachment-full size-full wp-image-262" alt=""
-											srcset="wp-content/uploads/sites/16/2024/06/WE2D4H8b.png 300w, wp-content/uploads/sites/16/2024/06/WE2D4H8b-150x150.png 150w"
-											sizes="(max-width: 300px) 100vw, 300px" />
-									</div>
-								</div>
-							</div>
-							<div class="elementor-element elementor-element-92f003e e-con-full e-flex e-con e-child"
-								data-id="92f003e" data-element_type="container">
-								<div class="elementor-element elementor-element-12ec35f elementor-vertical-align-top elementor-widget elementor-widget-image-box"
-									data-id="12ec35f" data-element_type="widget" data-widget_type="image-box.default">
-									<div class="elementor-widget-container">
-										<div class="elementor-image-box-wrapper">
-											<div class="elementor-image-box-content">
-												<h4 class="elementor-image-box-title">المقابلات وجهًا لوجه</h4>
-												<p class="elementor-image-box-description">إجراء المقابلات بشكل مباشر للحصول على استجابات دقيقة.
-												</p>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="elementor-element elementor-element-15c51d2 e-con-full e-flex e-con e-child"
-							data-id="15c51d2" data-element_type="container">
-							<div class="elementor-element elementor-element-1348822 e-con-full e-flex e-con e-child"
-								data-id="1348822" data-element_type="container">
-								<div class="elementor-element elementor-element-033d5e0 elementor-widget-mobile__width-initial elementor-widget elementor-widget-image"
-									data-id="033d5e0" data-element_type="widget" data-widget_type="image.default">
-									<div class="elementor-widget-container">
-										<img loading="lazy" decoding="async" width="300" height="300"
-											src="wp-content/uploads/sites/16/2024/06/WE2D4H8c.png"
-											class="attachment-full size-full wp-image-263" alt=""
-											srcset="wp-content/uploads/sites/16/2024/06/WE2D4H8c.png 300w, wp-content/uploads/sites/16/2024/06/WE2D4H8c-150x150.png 150w"
-											sizes="(max-width: 300px) 100vw, 300px" />
-									</div>
-								</div>
-							</div>
-							<div class="elementor-element elementor-element-5cec929 e-con-full e-flex e-con e-child"
-								data-id="5cec929" data-element_type="container">
-								<div class="elementor-element elementor-element-16e1ee9 elementor-vertical-align-top elementor-widget elementor-widget-image-box"
-									data-id="16e1ee9" data-element_type="widget" data-widget_type="image-box.default">
-									<div class="elementor-widget-container">
-										<div class="elementor-image-box-wrapper">
-											<div class="elementor-image-box-content">
-												<h4 class="elementor-image-box-title">جمع البيانات عبر الإنترنت</h4>
-												<p class="elementor-image-box-description">استخدام التكنولوجيا لتوسيع نطاق جمع البيانات والوصول إلى عينات أكبر.
-												</p>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="elementor-element elementor-element-90632db e-con-full e-flex e-con e-child"
-						data-id="90632db" data-element_type="container">
-						<div class="elementor-element elementor-element-a10fcc4 elementor-widget elementor-widget-image"
-							data-id="a10fcc4" data-element_type="widget" data-widget_type="image.default">
-							<div class="elementor-widget-container">
-								<img loading="lazy" decoding="async" width="687" height="800"
-									src="wp-content/uploads/sites/16/2024/06/SKESNTY.png"
-									class="attachment-full size-full wp-image-256" alt=""
-									srcset="wp-content/uploads/sites/16/2024/06/SKESNTY.png 687w, wp-content/uploads/sites/16/2024/06/SKESNTY-258x300.png 258w"
-									sizes="(max-width: 687px) 100vw, 687px" />
-							</div>
-						</div>
-					</div>
-					<div class="elementor-element elementor-element-a075e12 e-con-full e-flex e-con e-child text-left"
-						data-id="a075e12" data-element_type="container">
-						<div class="elementor-element elementor-element-ceb7fb9 elementor-widget elementor-widget-heading "
-							data-id="ceb7fb9" data-element_type="widget" data-widget_type="heading.default">
-							<div class="elementor-widget-container text-left">
-								<h3 class="elementor-heading-title elementor-size-default text-left">البحوث النوعية</h3>
-							</div>
-						</div>
-						<div class="elementor-element elementor-element-d2d9a77 e-con-full e-flex e-con e-child"
-							data-id="d2d9a77" data-element_type="container">
-							<div class="elementor-element elementor-element-e7ce03f e-con-full e-flex e-con e-child"
-								data-id="e7ce03f" data-element_type="container">
-								<div class="elementor-element elementor-element-7d806a9 elementor-vertical-align-top elementor-widget elementor-widget-image-box"
-									data-id="7d806a9" data-element_type="widget" data-widget_type="image-box.default">
-									<div class="elementor-widget-container">
-										<div class="elementor-image-box-wrapper">
-											<div class="elementor-image-box-content">
-												<h4 class="elementor-image-box-title">المقابلات الفردية المتعمقة
-												</h4>
-												<p class="elementor-image-box-description">جمع رؤى تفصيلية من الأفراد لفهم مواقفهم وتجاربهم.
-												</p>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="elementor-element elementor-element-00767b3 e-con-full e-flex e-con e-child"
-								data-id="00767b3" data-element_type="container">
-								<div class="elementor-element elementor-element-4833fc6 elementor-widget-mobile__width-initial elementor-widget elementor-widget-image"
-									data-id="4833fc6" data-element_type="widget" data-widget_type="image.default">
-									<div class="elementor-widget-container">
-										<img loading="lazy" decoding="async" width="300" height="300"
-											src="wp-content/uploads/sites/16/2024/06/WE2D4H8d.png"
-											class="attachment-full size-full wp-image-267" alt=""
-											srcset="wp-content/uploads/sites/16/2024/06/WE2D4H8d.png 300w, wp-content/uploads/sites/16/2024/06/WE2D4H8d-150x150.png 150w"
-											sizes="(max-width: 300px) 100vw, 300px" />
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="elementor-element elementor-element-f27d8b7 e-con-full e-flex e-con e-child"
-							data-id="f27d8b7" data-element_type="container">
-							<div class="elementor-element elementor-element-1647615 e-con-full e-flex e-con e-child"
-								data-id="1647615" data-element_type="container">
-								<div class="elementor-element elementor-element-df9e1a7 elementor-vertical-align-top elementor-widget elementor-widget-image-box"
-									data-id="df9e1a7" data-element_type="widget" data-widget_type="image-box.default">
-									<div class="elementor-widget-container">
-										<div class="elementor-image-box-wrapper">
-											<div class="elementor-image-box-content">
-												<h4 class="elementor-image-box-title">مجموعات التركيز</h4>
-												<p class="elementor-image-box-description">تبادل الآراء والأفكار بين مجموعة مختارة لتوليد رؤى متعددة.
-												</p>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="elementor-element elementor-element-9d0328a e-con-full e-flex e-con e-child"
-								data-id="9d0328a" data-element_type="container">
-								<div class="elementor-element elementor-element-7a2bee7 elementor-widget-mobile__width-initial elementor-widget elementor-widget-image"
-									data-id="7a2bee7" data-element_type="widget" data-widget_type="image.default">
-									<div class="elementor-widget-container">
-										<img loading="lazy" decoding="async" width="300" height="300"
-											src="wp-content/uploads/sites/16/2024/06/WE2D4H8e.png"
-											class="attachment-full size-full wp-image-268" alt=""
-											srcset="wp-content/uploads/sites/16/2024/06/WE2D4H8e.png 300w, wp-content/uploads/sites/16/2024/06/WE2D4H8e-150x150.png 150w"
-											sizes="(max-width: 300px) 100vw, 300px" />
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="elementor-element elementor-element-a5ed568 e-con-full e-flex e-con e-child"
-							data-id="a5ed568" data-element_type="container">
-							<div class="elementor-element elementor-element-fed62c4 e-con-full e-flex e-con e-child"
-								data-id="fed62c4" data-element_type="container">
-								<div class="elementor-element elementor-element-cee8d32 elementor-vertical-align-top elementor-widget elementor-widget-image-box"
-									data-id="cee8d32" data-element_type="widget" data-widget_type="image-box.default">
-									<div class="elementor-widget-container">
-										<div class="elementor-image-box-wrapper">
-											<div class="elementor-image-box-content">
-												<h4 class="elementor-image-box-title">البحوث الإثنوغرافية</h4>
-												<p class="elementor-image-box-description">دراسة البيئة الاجتماعية والثقافية لفهم السلوكيات والنماذج الاجتماعية.
-												</p>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="elementor-element elementor-element-90ac134 e-con-full e-flex e-con e-child"
-								data-id="90ac134" data-element_type="container">
-								<div class="elementor-element elementor-element-62cf067 elementor-widget-mobile__width-initial elementor-widget elementor-widget-image"
-									data-id="62cf067" data-element_type="widget" data-widget_type="image.default">
-									<div class="elementor-widget-container">
-										<img loading="lazy" decoding="async" width="300" height="300"
-											src="wp-content/uploads/sites/16/2024/06/WE2D4H8f.png"
-											class="attachment-full size-full wp-image-270" alt=""
-											srcset="wp-content/uploads/sites/16/2024/06/WE2D4H8f.png 300w, wp-content/uploads/sites/16/2024/06/WE2D4H8f-150x150.png 150w"
-											sizes="(max-width: 300px) 100vw, 300px" />
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 		<div class="partners elementor-element elementor-element-b158e5c e-flex e-con-boxed e-con e-parent"
 			data-id="b158e5c" data-element_type="container">
+
 			<div class="e-con-inner">
+				<div class="elementor-element elementor-element-32b4ed9 elementor-widget elementor-widget-heading"
+					data-id="32b4ed9" data-element_type="widget" data-widget_type="heading.default">
+					<div class="elementor-widget-container">
+						<h5 class="elementor-heading-title elementor-size-default">شركاؤنا</h5>
+					</div>
+				</div>
+				<div class="elementor-element elementor-element-fb08aa0 elementor-widget elementor-widget-heading"
+					data-id="fb08aa0" data-element_type="widget" data-widget_type="heading.default">
+					<div class="elementor-widget-container">
+						<h2 class="elementor-heading-title elementor-size-default">معاً لتحقيق التميز والابتكار
+						</h2>
+					</div>
+				</div>
 				<div class="elementor-element elementor-element-c268528 e-con-full e-flex e-con e-child"
 					data-id="c268528" data-element_type="container">
 					<div class="elementor-element elementor-element-94c8c3c e-con-full e-flex e-con e-child"
@@ -1952,7 +1175,7 @@
 						data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
 						<div class="elementor-element elementor-element-5a1c421 elementor-widget elementor-widget-image-carousel"
 							data-id="5a1c421" data-element_type="widget"
-							data-settings="{&quot;slides_to_show&quot;:&quot;6&quot;,&quot;slides_to_show_tablet&quot;:&quot;3&quot;,&quot;slides_to_show_mobile&quot;:&quot;1&quot;,&quot;slides_to_scroll&quot;:&quot;1&quot;,&quot;navigation&quot;:&quot;none&quot;,&quot;speed&quot;:1500,&quot;image_spacing_custom&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:55,&quot;sizes&quot;:[]},&quot;autoplay&quot;:&quot;yes&quot;,&quot;pause_on_hover&quot;:&quot;yes&quot;,&quot;pause_on_interaction&quot;:&quot;yes&quot;,&quot;autoplay_speed&quot;:5000,&quot;infinite&quot;:&quot;yes&quot;,&quot;image_spacing_custom_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}"
+							data-settings="{&quot;slides_to_show&quot;:&quot;6&quot;,&quot;slides_to_show_tablet&quot;:&quot;3&quot;,&quot;slides_to_show_mobile&quot;:&quot;1&quot;,&quot;slides_to_scroll&quot;:&quot;1&quot;,&quot;navigation&quot;:&quot;none&quot;,&quot;speed&quot;:300,&quot;image_spacing_custom&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:55,&quot;sizes&quot;:[]},&quot;autoplay&quot;:&quot;yes&quot;,&quot;pause_on_hover&quot;:&quot;yes&quot;,&quot;pause_on_interaction&quot;:&quot;yes&quot;,&quot;autoplay_speed&quot;:1500,&quot;infinite&quot;:&quot;yes&quot;,&quot;image_spacing_custom_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}"
 							data-widget_type="image-carousel.default">
 							<div class="elementor-widget-container">
 								<div class="elementor-image-carousel-wrapper swiper" dir="ltr">
@@ -2002,257 +1225,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="testimonials elementor-element elementor-element-dc82bfe e-flex e-con-boxed e-con e-parent"
-			data-id="dc82bfe" data-element_type="container"
-			data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-			<div class="e-con-inner">
-				<div class="elementor-element elementor-element-1c1bd56 e-con-full e-flex e-con e-child"
-					data-id="1c1bd56" data-element_type="container">
-					<div class="elementor-element elementor-element-0dbdd59 e-con-full e-flex e-con e-child"
-						data-id="0dbdd59" data-element_type="container">
-						<div class="elementor-element elementor-element-52852a8 elementor-widget elementor-widget-heading"
-							data-id="52852a8" data-element_type="widget" data-widget_type="heading.default">
-							<div class="elementor-widget-container">
-								<h5 class="elementor-heading-title elementor-size-default">آراء عملائنا</h5>
-							</div>
-						</div>
-						<div class="elementor-element elementor-element-dac52d0 elementor-widget elementor-widget-heading"
-							data-id="dac52d0" data-element_type="widget" data-widget_type="heading.default">
-							<div class="elementor-widget-container">
-								<h2 class="elementor-heading-title elementor-size-default">نتائج يثق بها عملاؤنا
-								</h2>
-							</div>
-						</div>
-					</div>
-					<div class="elementor-element elementor-element-2061798 e-con-full e-flex e-con e-child"
-						data-id="2061798" data-element_type="container">
-						<div class="elementor-element elementor-element-6c1f588 elementor-widget elementor-widget-text-editor"
-							data-id="6c1f588" data-element_type="widget" data-widget_type="text-editor.default">
-							<div class="elementor-widget-container">
-								<p>نفتخر بتقديم نتائج عالية الجودة تلبي توقعات عملائنا وتحقق لهم قيمة مضافة حقيقية. نعمل بتفانٍ لضمان تحقيق تأثير ملموس ومستدام، مما يجعل شركتنا شريكًا موثوقًا للمؤسسات في مسيرة تطويرها وتحقيق أهدافها.
 
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="elementor-element elementor-element-cdaa910 elementor-widget elementor-widget-elementskit-testimonial"
-					data-id="cdaa910" data-element_type="widget" data-widget_type="elementskit-testimonial.default">
-					<div class="elementor-widget-container">
-						<div class="ekit-wid-con">
-							<div class="elementskit-testimonial-slider ekit_testimonial_style_5 arrow_inside slider-dotted"
-								data-config="{&quot;rtl&quot;:false,&quot;arrows&quot;:false,&quot;dots&quot;:true,&quot;pauseOnHover&quot;:true,&quot;autoplay&quot;:true,&quot;speed&quot;:1000,&quot;slidesPerGroup&quot;:1,&quot;slidesPerView&quot;:3,&quot;loop&quot;:true,&quot;spaceBetween&quot;:&quot;&quot;,&quot;breakpoints&quot;:{&quot;320&quot;:{&quot;slidesPerView&quot;:1,&quot;slidesPerGroup&quot;:1,&quot;spaceBetween&quot;:10},&quot;768&quot;:{&quot;slidesPerView&quot;:2,&quot;slidesPerGroup&quot;:1,&quot;spaceBetween&quot;:10},&quot;1024&quot;:{&quot;slidesPerView&quot;:3,&quot;slidesPerGroup&quot;:1,&quot;spaceBetween&quot;:15}}}">
-								<div class="ekit-main-swiper swiper">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide">
-											<div class="swiper-slide-inner">
-												<div
-													class="elementskit-single-testimonial-slider elementskit-testimonial-slider-block-style elementskit-testimonial-slider-block-style-two   elementor-repeater-item-61c7a36">
-													<div class="elementskit-commentor-header">
-														<ul class="elementskit-stars">
-															<li><a><i class="eicon-star active"></i></a></li>
-
-															<li><a><i class="eicon-star active"></i></a></li>
-
-															<li><a><i class="eicon-star active"></i></a></li>
-
-															<li><a><i class="eicon-star active"></i></a></li>
-
-															<li><a><i class="eicon-star active"></i></a></li>
-
-														</ul>
-
-														<div
-															class="elementskit-icon-content elementskit-watermark-icon ">
-
-															<i aria-hidden="true" class="icon icon-quote"></i>
-														</div>
-													</div>
-
-													<div class="elementskit-commentor-content">
-														<p>شركة الحياة للدراسات والبحوث أحدثت تحولاً في استراتيجيتنا. تحليلاتهم دقيقة وقابلة للتنفيذ، ونحن سعداء للغاية بالنتائج!</p>
-													</div>
-
-													<div class="elementskit-commentor-bio">
-														<div class="elementkit-commentor-details ">
-															<div
-																class="elementskit-commentor-image ekit-testimonial--avatar">
-																<img loading="lazy" decoding="async" width="650"
-																	height="650"
-																	src="wp-content/uploads/sites/16/2024/06/YK2UXCUp.jpg"
-																	class="attachment-full size-full" alt=""
-																	srcset="wp-content/uploads/sites/16/2024/06/YK2UXCUp.jpg 650w, wp-content/uploads/sites/16/2024/06/YK2UXCUp-300x300.jpg 300w, wp-content/uploads/sites/16/2024/06/YK2UXCUp-150x150.jpg 150w"
-																	sizes="(max-width: 650px) 100vw, 650px" />
-															</div>
-															<div class="elementskit-profile-info">
-																<strong class="elementskit-author-name">
-																	أ. سارة</strong>
-																<span class="elementskit-author-des">مديرة التسويق</span>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="swiper-slide">
-											<div class="swiper-slide-inner">
-												<div
-													class="elementskit-single-testimonial-slider elementskit-testimonial-slider-block-style elementskit-testimonial-slider-block-style-two   elementor-repeater-item-37ace1f">
-													<div class="elementskit-commentor-header">
-														<ul class="elementskit-stars">
-															<li><a><i class="eicon-star active"></i></a></li>
-
-															<li><a><i class="eicon-star active"></i></a></li>
-
-															<li><a><i class="eicon-star active"></i></a></li>
-
-															<li><a><i class="eicon-star active"></i></a></li>
-
-															<li><a><i class="eicon-star active"></i></a></li>
-
-														</ul>
-
-														<div
-															class="elementskit-icon-content elementskit-watermark-icon ">
-
-															<i aria-hidden="true" class="icon icon-quote"></i>
-														</div>
-													</div>
-
-													<div class="elementskit-commentor-content">
-														<p>شركة الحياة للدراسات والبحوث أحدثت تحولاً في استراتيجيتنا. تحليلاتهم دقيقة وقابلة للتنفيذ، ونحن سعداء للغاية بالنتائج!</p>
-													</div>
-
-													<div class="elementskit-commentor-bio">
-														<div class="elementkit-commentor-details ">
-															<div
-																class="elementskit-commentor-image ekit-testimonial--avatar">
-																<img loading="lazy" decoding="async" width="650"
-																	height="650"
-																	src="wp-content/uploads/sites/16/2024/06/YK2UXCUa.jpg"
-																	class="attachment-full size-full" alt=""
-																	srcset="wp-content/uploads/sites/16/2024/06/YK2UXCUa.jpg 650w, wp-content/uploads/sites/16/2024/06/YK2UXCUa-300x300.jpg 300w, wp-content/uploads/sites/16/2024/06/YK2UXCUa-150x150.jpg 150w"
-																	sizes="(max-width: 650px) 100vw, 650px" />
-															</div>
-															<div class="elementskit-profile-info">
-																<strong class="elementskit-author-name">أ. سارة</strong>
-																<span class="elementskit-author-des">مديرة التسويق</span>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="swiper-slide">
-											<div class="swiper-slide-inner">
-												<div
-													class="elementskit-single-testimonial-slider elementskit-testimonial-slider-block-style elementskit-testimonial-slider-block-style-two   elementor-repeater-item-307130d">
-													<div class="elementskit-commentor-header">
-														<ul class="elementskit-stars">
-															<li><a><i class="eicon-star active"></i></a></li>
-
-															<li><a><i class="eicon-star active"></i></a></li>
-
-															<li><a><i class="eicon-star active"></i></a></li>
-
-															<li><a><i class="eicon-star active"></i></a></li>
-
-															<li><a><i class="eicon-star active"></i></a></li>
-
-														</ul>
-
-														<div
-															class="elementskit-icon-content elementskit-watermark-icon ">
-
-															<i aria-hidden="true" class="icon icon-quote"></i>
-														</div>
-													</div>
-
-													<div class="elementskit-commentor-content">
-														<p>شركة الحياة للدراسات والبحوث أحدثت تحولاً في استراتيجيتنا. تحليلاتهم دقيقة وقابلة للتنفيذ، ونحن سعداء للغاية بالنتائج!.</p>
-													</div>
-
-													<div class="elementskit-commentor-bio">
-														<div class="elementkit-commentor-details ">
-															<div
-																class="elementskit-commentor-image ekit-testimonial--avatar">
-																<img loading="lazy" decoding="async" width="650"
-																	height="650"
-																	src="wp-content/uploads/sites/16/2024/06/YK2UXCUf.jpg"
-																	class="attachment-full size-full" alt=""
-																	srcset="wp-content/uploads/sites/16/2024/06/YK2UXCUf.jpg 650w, wp-content/uploads/sites/16/2024/06/YK2UXCUf-300x300.jpg 300w, wp-content/uploads/sites/16/2024/06/YK2UXCUf-150x150.jpg 150w"
-																	sizes="(max-width: 650px) 100vw, 650px" />
-															</div>
-															<div class="elementskit-profile-info">
-																<strong class="elementskit-author-name">
-																	أ. سارة</strong>
-																<span class="elementskit-author-des">مديرة التسويق</span>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="swiper-slide">
-											<div class="swiper-slide-inner">
-												<div
-													class="elementskit-single-testimonial-slider elementskit-testimonial-slider-block-style elementskit-testimonial-slider-block-style-two   elementor-repeater-item-3a8c276">
-													<div class="elementskit-commentor-header">
-														<ul class="elementskit-stars">
-															<li><a><i class="eicon-star active"></i></a></li>
-
-															<li><a><i class="eicon-star active"></i></a></li>
-
-															<li><a><i class="eicon-star active"></i></a></li>
-
-															<li><a><i class="eicon-star active"></i></a></li>
-
-															<li><a><i class="eicon-star active"></i></a></li>
-
-														</ul>
-
-														<div
-															class="elementskit-icon-content elementskit-watermark-icon ">
-
-															<i aria-hidden="true" class="icon icon-quote"></i>
-														</div>
-													</div>
-
-													<div class="elementskit-commentor-content">
-														<p>شركة الحياة للدراسات والبحوث أحدثت تحولاً في استراتيجيتنا. تحليلاتهم دقيقة وقابلة للتنفيذ، ونحن سعداء للغاية بالنتائج!</p>
-													</div>
-
-													<div class="elementskit-commentor-bio">
-														<div class="elementkit-commentor-details ">
-															<div
-																class="elementskit-commentor-image ekit-testimonial--avatar">
-																<img loading="lazy" decoding="async" width="650"
-																	height="650"
-																	src="wp-content/uploads/sites/16/2024/06/YK2UXCUl.jpg"
-																	class="attachment-full size-full" alt=""
-																	srcset="wp-content/uploads/sites/16/2024/06/YK2UXCUl.jpg 650w, wp-content/uploads/sites/16/2024/06/YK2UXCUl-300x300.jpg 300w, wp-content/uploads/sites/16/2024/06/YK2UXCUl-150x150.jpg 150w"
-																	sizes="(max-width: 650px) 100vw, 650px" />
-															</div>
-															<div class="elementskit-profile-info">
-																<strong class="elementskit-author-name">أ. سارة</strong>
-																<span class="elementskit-author-des">مديرة التسويق</span>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-
-									<div class="swiper-pagination"></div>
-
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 		<div class="blogs elementor-element elementor-element-cecaea6 e-flex e-con-boxed e-con e-parent"
 			data-id="cecaea6" data-element_type="container">
 			<div class="e-con-inner">
@@ -2272,7 +1245,9 @@
 				<div class="elementor-element elementor-element-2e1c01c elementor-widget__width-initial elementor-widget elementor-widget-text-editor"
 					data-id="2e1c01c" data-element_type="widget" data-widget_type="text-editor.default">
 					<div class="elementor-widget-container">
-						<p>نقدم في هذا القسم مقالات وتحليلات مدعومة بالبيانات تسلط الضوء على أحدث الاتجاهات والأفكار في مجال البحث والدراسات. تابع مقالاتنا لتكتسب نظرة معمقة حول كيفية تأثير الأبحاث المدفوعة بالبيانات على اتخاذ القرارات الاستراتيجية وتحقيق النجاح.
+						<p>نقدم في هذا القسم مقالات وتحليلات مدعومة بالبيانات تسلط الضوء على أحدث الاتجاهات والأفكار في
+							مجال البحث والدراسات. تابع مقالاتنا لتكتسب نظرة معمقة حول كيفية تأثير الأبحاث المدفوعة
+							بالبيانات على اتخاذ القرارات الاستراتيجية وتحقيق النجاح.
 
 						</p>
 					</div>
@@ -2319,7 +1294,9 @@
 													href="2024/07/01/accurate-research-transforms-business-strategy-and-success/index.html">
 													استكشاف رؤى السوق </a>
 											</h2>
-											<p>هذه المقالة تقدم نظرة عامة على أهمية استخدام البيانات في اتخاذ القرارات، وتستعرض بعض الاستراتيجيات المدعومة بالبيانات التي يمكن أن تساعد في تحسين الأداء وتحقيق الأهداف بفعالية.</p>
+											<p>هذه المقالة تقدم نظرة عامة على أهمية استخدام البيانات في اتخاذ القرارات،
+												وتستعرض بعض الاستراتيجيات المدعومة بالبيانات التي يمكن أن تساعد في تحسين
+												الأداء وتحقيق الأهداف بفعالية.</p>
 											<div class="btn-wraper">
 												<a class="elementskit-btn whitespace--normal" id=""
 													href="2024/07/01/accurate-research-transforms-business-strategy-and-success/index.html">
@@ -2367,9 +1344,11 @@
 												<a
 													href="2024/07/01/top-market-research-trends-to-watch-in-2024/index.html">
 													اتجاهات جديدة في أبحاث السوق لعام 2024
- </a>
+												</a>
 											</h2>
-											<p>هذه المقالة تقدم نظرة عامة على أهمية استخدام البيانات في اتخاذ القرارات، وتستعرض بعض الاستراتيجيات المدعومة بالبيانات التي يمكن أن تساعد في تحسين الأداء وتحقيق الأهداف بفعالية.</p>
+											<p>هذه المقالة تقدم نظرة عامة على أهمية استخدام البيانات في اتخاذ القرارات،
+												وتستعرض بعض الاستراتيجيات المدعومة بالبيانات التي يمكن أن تساعد في تحسين
+												الأداء وتحقيق الأهداف بفعالية.</p>
 											<div class="btn-wraper">
 												<a class="elementskit-btn whitespace--normal" id=""
 													href="2024/07/01/top-market-research-trends-to-watch-in-2024/index.html">
@@ -2417,9 +1396,11 @@
 												<a
 													href="2024/07/01/unlock-market-insights-power-of-data-driven-research/index.html">
 													تأثير الأبحاث الدقيقة على استراتيجيات النجاح
- </a>
+												</a>
 											</h2>
-											<p>هذه المقالة تقدم نظرة عامة على أهمية استخدام البيانات في اتخاذ القرارات، وتستعرض بعض الاستراتيجيات المدعومة بالبيانات التي يمكن أن تساعد في تحسين الأداء وتحقيق الأهداف بفعالية.</p>
+											<p>هذه المقالة تقدم نظرة عامة على أهمية استخدام البيانات في اتخاذ القرارات،
+												وتستعرض بعض الاستراتيجيات المدعومة بالبيانات التي يمكن أن تساعد في تحسين
+												الأداء وتحقيق الأهداف بفعالية.</p>
 											<div class="btn-wraper">
 												<a class="elementskit-btn whitespace--normal" id=""
 													href="2024/07/01/unlock-market-insights-power-of-data-driven-research/index.html">
@@ -2437,51 +1418,183 @@
 				</div>
 			</div>
 		</div>
-		<div class="contact elementor-element elementor-element-694f49a e-flex e-con-boxed e-con e-parent"
-			data-id="694f49a" data-element_type="container"
-			data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+
+
+	</div>
+	<div class="elementor elementor-695 bg-white contact-us-2">
+		<div class="elementor-element elementor-element-a4bab7a e-flex e-con-boxed e-con e-parent e-lazyloaded"
+			data-id="a4bab7a" data-element_type="container">
 			<div class="e-con-inner">
-				<div class="elementor-element elementor-element-dbaf43a elementor-widget__width-initial elementor-widget elementor-widget-heading"
-					data-id="dbaf43a" data-element_type="widget" data-widget_type="heading.default">
-					<div class="elementor-widget-container">
-						<h2 class="elementor-heading-title elementor-size-default">Ready to Get the Research Data You
-							Need with Confidence?</h2>
-					</div>
-				</div>
-				<div class="elementor-element elementor-element-973a504 elementor-widget elementor-widget-heading"
-					data-id="973a504" data-element_type="widget" data-widget_type="heading.default">
-					<div class="elementor-widget-container">
-						<h5 class="elementor-heading-title elementor-size-default">Schedule a Consultation with Our
-							Experts Today!</h5>
-					</div>
-				</div>
-				<div class="elementor-element elementor-element-e0e0ad5 elementor-widget__width-initial elementor-widget elementor-widget-text-editor"
-					data-id="e0e0ad5" data-element_type="widget" data-widget_type="text-editor.default">
-					<div class="elementor-widget-container">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada nibh ipsum, id
-							eleifend elit sodales in. Etiam consequat tortor sed felis ornare, et pulvinar leo
-							consequat. </p>
-					</div>
-				</div>
-				<div class="elementor-element elementor-element-ebfb393 elementor-align-center elementor-widget elementor-widget-button"
-					data-id="ebfb393" data-element_type="widget" data-widget_type="button.default">
-					<div class="elementor-widget-container">
-						<div class="elementor-button-wrapper">
-							<a class="elementor-button elementor-button-link elementor-size-sm" href="#">
-								<span class="elementor-button-content-wrapper">
-									<span class="elementor-button-icon">
-										<svg aria-hidden="true" class="e-font-icon-svg e-fas-arrow-right"
-											viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
-											<path
-												d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z">
-											</path>
-										</svg> </span>
-									<span class="elementor-button-text">Contact Us Now</span>
-								</span>
-							</a>
+				<div class="elementor-element elementor-element-e7b588b e-con-full e-flex e-con e-child"
+					data-id="e7b588b" data-element_type="container">
+					<div class="elementor-element elementor-element-aad409d elementor-widget elementor-widget-image"
+						data-id="aad409d" data-element_type="widget" data-widget_type="image.default">
+						<div class="elementor-widget-container">
+							<img fetchpriority="high" decoding="async" width="600" height="400"
+								src="../../wp-content/uploads/sites/16/2024/06/ZWCL42K.jpg"
+								class="attachment-full size-full wp-image-462" alt=""
+								>
 						</div>
 					</div>
 				</div>
+				<div class="elementor-element elementor-element-b032b7f e-con-full e-flex e-con e-child"
+					data-id="b032b7f" data-element_type="container">
+					<div class="elementor-element elementor-element-ab8b3f6 elementor-widget elementor-widget-heading"
+						data-id="ab8b3f6" data-element_type="widget" data-widget_type="heading.default">
+						<div class="elementor-widget-container">
+							<h3 class="elementor-heading-title elementor-size-default">تواصل معنا</h3>
+						</div>
+					</div>
+					<div class="elementor-element elementor-element-9cf9e50 elementor-widget elementor-widget-text-editor"
+						data-id="9cf9e50" data-element_type="widget" data-widget_type="text-editor.default">
+						<div class="elementor-widget-container">
+							<p>نحن هنا للإجابة على جميع استفساراتكم وتقديم الدعم الذي تحتاجونه، لا تترددوا في التواصل معنا</p>
+						</div>
+					</div>
+					<div class="elementor-element elementor-element-e412ada elementor-widget elementor-widget-metform"
+						data-id="e412ada" data-element_type="widget" data-widget_type="metform.default">
+						<div class="elementor-widget-container">
+							<div id="mf-response-props-id-446" data-previous-steps-style="" data-editswitchopen=""
+								data-response_type="alert" data-erroricon="fas fa-exclamation-triangle"
+								data-successicon="fas fa-check" data-messageposition="top" class="   mf-scroll-top-no">
+								<div class="formpicker_warper formpicker_warper_editable"
+									data-metform-formpicker-key="446">
+
+									<div class="elementor-widget-container">
+
+										<div id="metform-wrap-e412ada-446" class="mf-form-wrapper" data-form-id="446"
+											data-action="https://askit.dextheme.net/riset/wp-json/metform/v1/entries/insert/446"
+											data-wp-nonce="3eec19dd37" data-form-nonce="ebd3959bc3"
+											data-quiz-summery="false" data-save-progress="false"
+											data-form-type="general-form" data-stop-vertical-effect="">
+											<form class="metform-form-content">
+												<div class="mf-main-response-wrap   mf-response-msg-wrap" data-show="0">
+													<div class="mf-response-msg"><i
+															class="mf-success-icon fas fa-check"></i>
+														<p></p>
+													</div>
+												</div>
+												<div class="metform-form-main-wrapper">
+													<div data-elementor-type="wp-post" data-elementor-id="446"
+														class="elementor elementor-446">
+														<div class="elementor-element elementor-element-9c78c4f e-con-full e-flex e-con e-parent"
+															data-id="9c78c4f" data-element_type="container">
+															<div class="elementor-element elementor-element-c6ec4de e-con-full e-flex flex-row e-con e-child"
+																data-id="c6ec4de" data-element_type="container">
+																<div class="elementor-element elementor-element-6ffd6c6 e-con-full e-flex e-con e-child"
+																	data-id="6ffd6c6" data-element_type="container">
+																	<div class="elementor-element elementor-element-5f0dcc2 elementor-widget elementor-widget-mf-text"
+																		data-id="5f0dcc2" data-element_type="widget"
+																		data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}"
+																		data-widget_type="mf-text.default">
+																		<div class="elementor-widget-container">
+																			<div class="mf-input-wrapper"><input
+																					type="text" class="mf-input "
+																					id="mf-input-text-5f0dcc2"
+																					name="mf-text" placeholder="الاسم "
+																					aria-invalid="false"></div>
+																		</div>
+																	</div>
+																</div>
+																<div class="elementor-element elementor-element-42c0b10 e-con-full e-flex e-con e-child"
+																	data-id="42c0b10" data-element_type="container">
+																	<div class="elementor-element elementor-element-5d5ef19 elementor-widget elementor-widget-mf-email"
+																		data-id="5d5ef19" data-element_type="widget"
+																		data-settings="{&quot;mf_input_name&quot;:&quot;mf-email&quot;}"
+																		data-widget_type="mf-email.default">
+																		<div class="elementor-widget-container">
+																			<div class="mf-input-wrapper"><input
+																					type="email" class="mf-input"
+																					id="mf-input-email-5d5ef19"
+																					name="mf-email" placeholder="البريد الإلكتروني "
+																					aria-invalid="false" value=""></div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="elementor-element elementor-element-afbf92a e-con-full e-flex flex-row e-con e-child"
+																data-id="afbf92a" data-element_type="container">
+																<div class="elementor-element elementor-element-1db7b22 e-con-full e-flex e-con e-child"
+																	data-id="1db7b22" data-element_type="container">
+																	<div class="elementor-element elementor-element-64eb6ba elementor-widget elementor-widget-mf-telephone"
+																		data-id="64eb6ba" data-element_type="widget"
+																		data-settings="{&quot;mf_input_name&quot;:&quot;mf-telephone&quot;}"
+																		data-widget_type="mf-telephone.default">
+																		<div class="elementor-widget-container">
+																			<div class="mf-input-wrapper"><input
+																					type="tel" class="mf-input"
+																					id="mf-input-telephone-64eb6ba"
+																					name="mf-telephone"
+																					placeholder="رقم الهاتف "
+																					aria-invalid="false"></div>
+																		</div>
+																	</div>
+																</div>
+																<div class="elementor-element elementor-element-0f0d1ae e-con-full e-flex e-con e-child"
+																	data-id="0f0d1ae" data-element_type="container">
+																	<div class="elementor-element elementor-element-881def4 elementor-widget elementor-widget-mf-text"
+																		data-id="881def4" data-element_type="widget"
+																		data-settings="{&quot;mf_input_name&quot;:&quot;mf-text&quot;}"
+																		data-widget_type="mf-text.default">
+																		<div class="elementor-widget-container">
+																			<div class="mf-input-wrapper"><input
+																					type="text" class="mf-input"
+																					id="mf-input-text-881def4"
+																					name="mf-text"
+																					placeholder="موضوع الرسالة "
+																					aria-invalid="false"></div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+															<div class="elementor-element elementor-element-b650bab elementor-widget elementor-widget-mf-textarea "
+																data-id="b650bab" data-element_type="widget"
+																data-settings="{&quot;mf_input_name&quot;:&quot;mf-textarea&quot;}"
+																data-widget_type="mf-textarea.default">
+																<div class="elementor-widget-container">
+																	<div class="mf-input-wrapper"><textarea
+																			class="mf-input mf-textarea "
+																			id="mf-input-text-area-b650bab"
+																			name="mf-textarea"
+																			placeholder="اكتب رسالتك هنا... "
+																			cols="30" rows="10"
+																			aria-invalid="false"></textarea></div>
+																</div>
+															</div>
+															<div class="elementor-element elementor-element-462937c mf-btn--justify mf-btn--mobile-justify mf-btn--tablet-justify elementor-widget elementor-widget-mf-button"
+																data-id="462937c" data-element_type="widget"
+																data-widget_type="mf-button.default">
+																<div class="elementor-widget-container">
+																	<div class="mf-btn-wraper "
+																		data-mf-form-conditional-logic-requirement="">
+																		<button type="submit"
+																			class="metform-btn metform-submit-btn "
+																			id=""><span>Send Message </span></button>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</form>
+										</div>
+
+
+										<!----------------------------- 
+			* controls_data : find the the props passed indie of data attribute
+			* props.SubmitResponseMarkup : contains the markup of error or success message
+			* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+		--------------------------- -->
+
+
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
 			</div>
 		</div>
 	</div>
@@ -2507,9 +1620,10 @@
 								<div class="elementor-element elementor-element-979af4c elementor-widget elementor-widget-text-editor"
 									data-id="979af4c" data-element_type="widget" data-widget_type="text-editor.default">
 									<div class="elementor-widget-container">
-										<p>شريككم في الدقة والابتكار. مع الدقة التي نقدمها من خلال رؤيتنا الاستراتيجية، نأخذ بيدكم نحو المستقبل.
+										<p>شريككم في الدقة والابتكار.
 
 										</p>
+										<p><i class="fas fa-map-marker-alt ms-2"></i>موقعنا: نابلس، شارع سفيان</p>
 									</div>
 								</div>
 							</div>
@@ -2518,7 +1632,7 @@
 								<div class="elementor-element elementor-element-98c96d7 elementor-widget elementor-widget-heading"
 									data-id="98c96d7" data-element_type="widget" data-widget_type="heading.default">
 									<div class="elementor-widget-container">
-										<h4 class="elementor-heading-title elementor-size-default">خدماتنا</h4>
+										<h4 class="elementor-heading-title elementor-size-default">شركة الحياة</h4>
 									</div>
 								</div>
 								<div class="elementor-element elementor-element-c91f117 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list"
@@ -2529,27 +1643,27 @@
 												<a href="#">
 
 													<span class="elementor-icon-list-text">
-														خطط المتابعة والتقييم</span>
+														من نحن</span>
 												</a>
 											</li>
 											<li class="elementor-icon-list-item">
 												<a href="#">
 
 													<span class="elementor-icon-list-text">
-														إعداد الخطط الاستراتيجية</span>
+														رؤيتنا</span>
 												</a>
 											</li>
 											<li class="elementor-icon-list-item">
 												<a href="#">
 
-													<span class="elementor-icon-list-text">بناء القدرات المؤسسية</span>
+													<span class="elementor-icon-list-text">رسالتنا</span>
 												</a>
 											</li>
 											<li class="elementor-icon-list-item">
 												<a href="#">
 
 													<span class="elementor-icon-list-text">
-														مهارات التدريب والتيسير</span>
+														الهيئة الاستشارية</span>
 												</a>
 											</li>
 										</ul>
@@ -2580,19 +1694,19 @@
 											<li class="elementor-icon-list-item">
 												<a href="#">
 
-													<span class="elementor-icon-list-text">خدماتني</span>
+													<span class="elementor-icon-list-text">خدماتنا</span>
 												</a>
 											</li>
 											<li class="elementor-icon-list-item">
 												<a href="#">
 
-													<span class="elementor-icon-list-text">دراسات حالة</span>
+													<span class="elementor-icon-list-text">المشاريع</span>
 												</a>
 											</li>
 											<li class="elementor-icon-list-item">
 												<a href="#">
 
-													<span class="elementor-icon-list-text">فريقنا</span>
+													<span class="elementor-icon-list-text">الدورات التدريبية</span>
 												</a>
 											</li>
 										</ul>
@@ -2794,6 +1908,7 @@
 			</div>
 		</div>
 	</div>
+
 	<script type='text/javascript'>
 		const lazyloadRunObserver = () => {
 			const lazyloadBackgrounds = document.querySelectorAll(`.e-con.e-parent:not(.e-lazyloaded)`);
@@ -2856,6 +1971,9 @@
 	<link rel='stylesheet' id='e-apple-webkit-css'
 		href='wp-content/plugins/elementor/assets/css/conditionals/apple-webkit.min%EF%B9%96ver=3.24.7.css'
 		media='all' />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+		integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<script src="wp-content/plugins/metform/public/assets/lib/cute-alert/cute-alert%EF%B9%96ver=3.9.0.js"
 		id="cute-alert-js"></script>
 	<script src="wp-content/themes/hello-elementor/assets/js/hello-frontend.min%EF%B9%96ver=3.1.1.js"
@@ -2869,6 +1987,9 @@
 
 
 	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"
+		integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script src="wp-content/plugins/elementskit-lite/widgets/init/assets/js/widget-scripts%EF%B9%96ver=3.3.0.js"
 		id="ekit-widget-scripts-js"></script>
 	<script src="wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min%EF%B9%96ver=3.24.7.js"
